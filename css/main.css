@@ -1,23 +1,29 @@
 body{
     background-color: #1e1e1e;
-    color: #d1d1d1;
+    color: #e4e4e4;
     font-family: "Helvetica";
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: -0.244px;
     line-height: 20px;
     word-spacing: 0.1px;
     line-height: 28px;
     text-align: center;
+    margin: 0;
 }
 
+
+/****************************************** Hyperlink ******************************************/
 a{
     color: #4fb8fe;
+    text-decoration-line: none;
 }
-
 a:hover{
     color: #b5cea8;
+    text-decoration-line: underline;
 }
+/****************************************** Hyperlink ******************************************/
+
 
 h1{
     color: #d1d1d1;
@@ -25,15 +31,10 @@ h1{
     font-size: 32px;
     font-weight: 550;
     letter-spacing: 0.05px;
-    line-height: 38px;
+    line-height: 50px;
     word-spacing: -0.1px;
 
-    margin: 10px 0px 10px 0px;
-
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;
-    padding: 5px;
+    margin: 0;
 
     text-align: center;
 
@@ -46,10 +47,6 @@ td{
     border-width: 0.05em;
 }
 
-td{
-    border-style: solid;
-}
-
 hr{
     height: 0px;
     border-style: none;
@@ -58,3 +55,35 @@ hr{
     border-width: 5px;
     width: 10%;
 }
+/****************************************** Hero Animation ******************************************/
+.hero{
+        animation: yourAnimation 1s forwards 0s ease-out;
+}
+@keyframes yourAnimation{
+    0%{
+        transform: rotate(0) translateY(20%);
+        opacity: 0;
+        }
+    100%{
+        transform: rotate(0) translateY(0);
+        opacity: 1;
+        }
+}
+/****************************************** Hero Animation ******************************************/
+
+
+/****************************************** Heading Animation ******************************************/
+.heading{
+    animation: yourAnimation2 1s forwards 0s ease-out;
+}
+@keyframes yourAnimation2{
+    0%{
+        transform: rotate(0) translateY(-20%);
+        opacity: 0;
+        }
+    100%{
+        transform: rotate(0) translateY(0);
+        opacity: 1;
+        }
+}
+/****************************************** Heading Animation ******************************************/
