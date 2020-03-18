@@ -87,3 +87,69 @@ hr{
         }
 }
 /****************************************** Heading Animation ******************************************/
+
+
+/****************************************** Green Button Styling ******************************************/
+.bluebutton{
+    font-family: "Helvetica";
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: -0.244px;
+    line-height: 20px;
+    word-spacing: 0.1px;
+    line-height: 28px;
+    text-align: center;
+    margin: 10px;
+    border-style: solid;
+    border-color: #ffa530;
+    border-radius: 50px;
+    border-width: 2px;
+    
+    padding: 7px 15px;
+    color: #ffa530;
+    text-transform: unset
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.1s;
+}
+
+a.bluebutton:hover{
+    color: #000000;
+    background: #ffa530;
+    box-shadow: 0 0 10px #ffa530, 0 0 20px #ffa530, 0 0 40px #ffa530;
+    text-decoration: none;
+}
+/****************************************** Green Button Styling ******************************************/
+
+
+/****************************************** Green Button Styling ******************************************/
+.greenbutton{
+    font-family: "Helvetica";
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: -0.244px;
+    line-height: 20px;
+    word-spacing: 0.1px;
+    line-height: 28px;
+    text-align: center;
+    margin: 10px;
+    border-style: solid;
+    border-color: #09ff00;
+    border-radius: 50px;
+    border-width: 2px;
+    
+    padding: 7px 15px;
+    color: #09ff00;
+    text-transform: unset
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.1s;
+}
+
+a.greenbutton:hover{
+    color: #000000;
+    background: #09ff00;
+    box-shadow: 0 0 10px #09ff00, 0 0 20px #09ff00, 0 0 40px #09ff00;
+    text-decoration: none;
+}
+/****************************************** Green Button Styling ******************************************/
