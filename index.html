@@ -29,8 +29,20 @@
                     
         </div>
             
-<embed src="downloads/Score Card.pdf#navbar=0" height=600px width=50%>
-</embed>
+            <hr>
+      
+<p>This is IFrame</p>
+    <button onclick="displayIframe()" class="bluebutton">Click me</button>
+  <div id="iframeDisplay"></div>  
+
+<script>
+    function displayIframe() {
+        document.getElementById("iframeDisplay").innerHTML = "<iframe src=\"downloads/Score Card.pdf" height=\"200\" width=\"300\" ></iframe>";
+
+    }
+</script>
+            
+            
                   
 </body>
 </html>
