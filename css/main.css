@@ -1,17 +1,13 @@
 body{
-    background-color: #000000;
-    color: #e4e4e4;
-    font-family: "Helvetica";
-    font-size: 18px;
-    font-weight: 400;
-    letter-spacing: -0.244px;
-    line-height: 20px;
-    word-spacing: 0.1px;
-    line-height: 28px;
+    background-color: #111111;
+    color: #d1d1d1;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
     text-align: center;
     margin: 0;
 }
 
+    
 
 /****************************************** Hyperlink ******************************************/
 a{
@@ -24,23 +20,18 @@ a:hover{
 }
 /****************************************** Hyperlink ******************************************/
 
-
+img{
+    pointer-events: none;
+}
 h1{
-    color: #d1d1d1;
-    font-family: sans-serif;
-    font-size: 32px;
-    font-weight: 550;
-    letter-spacing: 0.05px;
-    line-height: 50px;
-    word-spacing: -0.1px;
-
-    margin: 0;
-
+    color: #ffffff;
+    font-family: 'Sacramento', cursive;
+    font-size: 2.5em;
+    font-weight: 300;
     text-align: center;
-
+    margin: 0;
     background-color: #161616;
 }
-
 
 td{
     border-style: solid;
@@ -51,47 +42,18 @@ hr{
     height: 0px;
     border-style: none;
     border-top-style: dotted;
-    border-color: gray;
+    border-color: #d1d1d1;
     border-width: 5px;
     width: 10%;
 }
 /****************************************** Hero Animation ******************************************/
-.hero{
-        animation: yourAnimation 1s forwards 0s ease-out;
-}
-@keyframes yourAnimation{
-    0%{
-        transform: rotate(0) translateY(20%);
-        opacity: 0;
-        }
-    100%{
-        transform: rotate(0) translateY(0);
-        opacity: 1;
-        }
-}
-/****************************************** Hero Animation ******************************************/
 
 
-/****************************************** Heading Animation ******************************************/
-.heading{
-    animation: yourAnimation2 1s forwards 0s ease-out;
-}
-@keyframes yourAnimation2{
-    0%{
-        transform: rotate(0) translateY(-20%);
-        opacity: 0;
-        }
-    100%{
-        transform: rotate(0) translateY(0);
-        opacity: 1;
-        }
-}
-/****************************************** Heading Animation ******************************************/
 
 
 /****************************************** Green Button Styling ******************************************/
 .bluebutton{
-    font-family: "Helvetica";
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 400;
     letter-spacing: -0.244px;
@@ -107,7 +69,7 @@ hr{
     
     padding: 7px 15px;
     color: #ffa530;
-    text-transform: unset
+    text-transform: unset;
     text-decoration: none;
     overflow: hidden;
     transition: 0.1s;
@@ -116,15 +78,16 @@ hr{
 a.bluebutton:hover{
     color: #000000;
     background: #ffa530;
-    box-shadow: 0 0 10px #ffa530, 0 0 20px #ffa530, 0 0 40px #ffa530;
     text-decoration: none;
 }
 /****************************************** Green Button Styling ******************************************/
 
 
+
+
 /****************************************** Green Button Styling ******************************************/
 .greenbutton{
-    font-family: "Helvetica";
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 400;
     letter-spacing: -0.244px;
@@ -140,7 +103,7 @@ a.bluebutton:hover{
     
     padding: 7px 15px;
     color: #09ff00;
-    text-transform: unset
+    text-transform: unset;
     text-decoration: none;
     overflow: hidden;
     transition: 0.1s;
@@ -149,7 +112,6 @@ a.bluebutton:hover{
 a.greenbutton:hover{
     color: #000000;
     background: #09ff00;
-    box-shadow: 0 0 10px #09ff00, 0 0 20px #09ff00, 0 0 40px #09ff00;
     text-decoration: none;
 }
 /****************************************** Green Button Styling ******************************************/
