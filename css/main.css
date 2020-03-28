@@ -1,9 +1,11 @@
 body{
     background-color: #111111;
     color: #d1d1d1;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto';
+    font-weight: normal;
     font-size: 1.2em;
     text-align: center;
+    line-height: 1.2;
     margin: 0;
 }
 
@@ -15,7 +17,6 @@ a{
     text-decoration-line: none;
 }
 a:hover{
-    color: #b5cea8;
     text-decoration-line: underline;
 }
 /****************************************** Hyperlink ******************************************/
@@ -25,11 +26,12 @@ img{
 }
 h1{
     color: #ffffff;
-    font-family: 'Sacramento', cursive;
+    font-family: 'Sacramento';
+    font-weight: normal;
     font-size: 2.5em;
-    font-weight: 300;
     text-align: center;
     margin: 0;
+    padding-top: 12px;
     background-color: #161616;
 }
 
@@ -44,7 +46,7 @@ hr{
     border-top-style: dotted;
     border-color: #d1d1d1;
     border-width: 5px;
-    width: 10%;
+    width: 0%;
 }
 /****************************************** Hero Animation ******************************************/
 
