@@ -1,23 +1,4 @@
-.SegoeUI{
-    color: #155724;
-    background-color: #D4EDDA;
-    border-color: #c3e6cb;
-
-    position: relative;
-    padding: .75rem 1.25rem;
-    margin-bottom: 1rem;
-    border: 1px solid transparent;
-    border-radius: .25rem;
-
-    box-sizing: border-box;
-
-    display: block;
-
-    font-family: "Segoe UI";
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-}
+@import url(https://fonts.googleapis.com/css?family=Roboto|Sacramento&display=swap);
 
 .Roboto{
     color: #155724;
@@ -39,5 +20,3 @@
     font-weight: 400;
     line-height: 1.5;
 }
-
-@import url(https://fonts.googleapis.com/css?family=Roboto|Sacramento&display=swap);
