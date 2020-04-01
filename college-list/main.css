@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 .college-card{
     width: 256px;
     height: 150px;
