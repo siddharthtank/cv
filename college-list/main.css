@@ -37,5 +37,5 @@ p{
     margin-right: 5%;
     display: grid;
     place-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(276px, 1fr))
+    grid-template-columns: repeat(auto-fit, minmax(256px, 1fr))
 }
