@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.college-card{
+    width: 256px;
+    height: 150px;
+    /* background-color: beige; */
+    margin: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: slategrey;
+}
+.college-logo{
+    width: 256px;
+    height: 115px;
+    display: grid;
+    place-items: center;
+}
+.college-name{
+    background-color:  rebeccapurple;
+    height: 35px;
+    display: grid;
+    place-items: center;
+}
+p{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    color: seashell;
+}
+
+.container{
+    margin-left: 5%;
+    margin-right: 5%;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(276px, 1fr))
+}
