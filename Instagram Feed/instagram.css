@@ -3,15 +3,20 @@
     padding: 0;
 }
 
+/* ===================================================== White sppace container =======*/
 .container{
     max-width: 1200px;
-    background-color: dimgray;
+    background-color: rgb(55, 242, 255);
     margin: 0 auto;
     padding: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+/* ===================================================== White sppace container =======*/
 
+
+
+/* ===================================================== Instagram Image Gallary =======*/
 .item{
     margin: 1%;
 }
@@ -23,10 +28,23 @@
 
 .item:hover{
     margin: 0;
-    transition: .05s ease-in-out;
 }
 
+.item:hover .overlay {
+    background-color: #000000;
+}
 
+.item:hover .img-fluid{
+    display: block;
+    opacity: 0.7;
+    transition: 0.1s ;
+}
+/* ===================================================== Instagram Image Gallary =======*/
+
+
+
+
+/* ===================================================== Media Quary for responsiveness =======*/
 @media (min-width:576px) {
     .container {
         max-width: 576px
@@ -48,6 +66,7 @@
 
 @media (min-width:1200px) {
     .container {
+        padding: 50px;
         max-width: 1140px
     }
 }
@@ -57,4 +76,4 @@
         max-width: 1380px
     }
 }
-
+/* ===================================================== Media Quary for responsiveness =======*/
