@@ -5,11 +5,11 @@ html, body{
     height: 100vh;
 }
 
-section ,div{
+/* section ,div{
     border-style: dashed;
     border-color: brown;
     border-width: 1px;
-}
+} */
 
 .container{
     max-width: 1200px;
@@ -43,7 +43,7 @@ section ,div{
     padding-top: 3%;
     display: grid;
     grid-template-columns: 1fr;
-    height: 70vh;
+    height: 79vh;
     overflow-y: scroll;
     padding: 0 8px;
 }
@@ -77,17 +77,18 @@ a{
 }
 
 a:last-child{
-        margin-bottom: 80px;
+        margin-bottom: 150px;
     }
 
 
 @media (min-width:768px) {
 
     .container{
+        max-width: 100%;
         padding: 10px;
         height: auto;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 0.5fr;
     }
     
     .hero-bg{
@@ -103,12 +104,16 @@ a:last-child{
         font-size: 1rem;
     }
 
+    .class{
+        margin: 0;
+        padding: 0;
+    }
     .list{
-    padding-top: 3%;
+    margin: 0;
+    padding: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
     overflow-y: scroll;
-    padding: 0 8px;
 }
 
 .video-card{
@@ -138,13 +143,5 @@ a{
     text-decoration: none;
     color: black;
 }
-
-    a:last-child{
-        margin-bottom: 100px;
-    }
-
-    a .last-margin{
-        height: 100px;
-    }
 
 }
