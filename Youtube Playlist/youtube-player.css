@@ -5,11 +5,11 @@ html, body{
     height: 100vh;
 }
 
-/* section ,div{
+section ,div{
     border-style: dashed;
     border-color: brown;
     border-width: 1px;
-} */
+}
 
 .container{
     max-width: 1200px;
@@ -81,28 +81,63 @@ a:last-child{
     }
 
 
-@media (min-width:992px) {
+@media (min-width:768px) {
 
     .container{
         padding: 10px;
-        height: 98vh;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .hero-bg{
+        width: 100%;
+    }
+
+    .size{
+        width: 100%;
+        margin: 0 auto;
     }
 
     .title{
         font-size: 1rem;
     }
 
-    .list {
-        grid-template-columns: 1fr 1fr 1fr;
-        margin-bottom: 10%;
-        height: 60vh;
-    }
+    .list{
+    padding-top: 3%;
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow-y: scroll;
+    padding: 0 8px;
+}
 
-    .video-card{
-        grid-template-columns: none;
-        font-size: 1.3rem;
-        border: none;
-    }
+.video-card{
+    margin: 0.5% 0;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    border: solid 0.5px #000;
+}
+
+.list img{
+    padding: 0 2%;
+    max-width: 95%;
+}
+
+.title{
+    padding: 0 10px;
+    font-size: 0.9rem;
+}
+
+.list h2{
+    font-size: 0.9rem;
+    padding: 0 2%;
+    max-width: 95%;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
 
     a:last-child{
         margin-bottom: 100px;
