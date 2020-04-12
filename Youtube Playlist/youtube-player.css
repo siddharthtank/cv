@@ -85,7 +85,7 @@ a:last-child{
 
     .container{
         padding: 10px;
-        height: 95vh;
+        height: 98vh;
     }
 
     .title{
@@ -101,7 +101,7 @@ a:last-child{
     .video-card{
         grid-template-columns: none;
         font-size: 1.3rem;
-        border: \none;
+        border: none;
     }
 
     a:last-child{
