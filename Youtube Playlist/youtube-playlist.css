@@ -19,7 +19,7 @@ html, body{
 
 
 .header{
-    background-color: #1f002e;
+    background-color: rgb(32, 32, 32);
 } 
 
 .body{
@@ -155,14 +155,14 @@ a{
 
 
 
-@media (max-width: 1140px){
+@media (max-width: 768px){
     .wrapper{
         grid-template-columns: 1fr;
-        max-width: 1140px;
+        max-width: 768px;
     }
 
     .body{
-        padding: 0;
+        padding: 1% 0 0 0;
     }
 
     .title{
@@ -171,11 +171,11 @@ a{
     }
 
     .url{
-        height: 78%;
+        height: 77%;
     }
 
     .scroll{
-        height: 90%;
+        height: 88%;
     }
 
     .video-list{
