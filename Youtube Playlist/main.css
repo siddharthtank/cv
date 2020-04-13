@@ -4,20 +4,16 @@
   padding: 0;
 }
 
-body,
-html {
-  overflow: hidden;
-  height: 100vh;
-}
-
 body header {
   background-color: red;
   height: 2em;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 body main {
   height: calc(100% - 4em);
-  overflow-y: scroll;
 }
 
 body footer {
@@ -32,7 +28,7 @@ main .flex {
       grid-template-columns: 1fr;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: 2em;
   z-index: 1;
   background-color: white;
 }
@@ -41,13 +37,15 @@ main .flex .video {
   width: 100%;
   padding-top: 56.25%;
   background-color: green;
-  margin-top: 1em;
 }
 
 main .flex .title {
   height: 3em;
-  background-color: blueviolet;
   margin-bottom: 1em;
+}
+
+main .flex .title h2 {
+  margin-top: 0.5em;
 }
 
 main .playlist {
@@ -64,5 +62,16 @@ main .playlist p {
 
 main .playlist p:last-child {
   margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  main {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  main .flex .video {
+    background-color: red;
+    margin-top: 2em;
+  }
 }
 /*# sourceMappingURL=main.css.map */
