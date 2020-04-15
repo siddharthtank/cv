@@ -22,6 +22,7 @@ body {
 }
 
 .navbar-brand img {
+    display: block;
     max-height: 30px;
 }
 
@@ -39,7 +40,7 @@ body {
 .video-player{
     margin-top: 20px;
     margin-bottom: 20px;
-    padding: 10px 0 10px 10px;
+    padding: 10px 10px 10px 10px;
     background: #fff;
     border: 1px solid transparent;
     box-shadow: 0 0 5px rgb(0, 0, 0, 0.12);
@@ -75,7 +76,8 @@ iframe {
 
 
 .playlist-section{
-    padding: 0 10px;
+    padding: 0;
+    padding-left: 10px;
 }
 
 .playlist-container{
@@ -86,25 +88,46 @@ iframe {
 
 .ramesh{
     height: 60px;
-    width: 100%;
+    width: calc(100% - 1px);
     border: 1px solid transparent;
-    box-shadow: 0 0 5px rgb(0, 0, 0, 0.12);
+    box-shadow: -2px -2px 5px rgb(0, 0, 0, 0.06);
     display: block;
-    margin-right: 10px;
+    padding: 5px 10px;
+}
+
+
+.playlist-name{
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    display: block;
+}
+
+.playlist-author{
+    padding: 0;
+    margin: 0;
+    font-size: 0.8rem;
+    display: block;
 }
 
 .playlist{
     position: absolute;
     height: 100%;
     overflow-y: scroll;
+    border: 1px solid transparent;
+    box-shadow: -2px 2px 5px rgb(0, 0, 0, 0.06);
 }
 
 .playlist > p{
-   color: #f0f0f0;
+   color: #000;
    padding: 10px;
    margin-bottom: 5px;
-   background-color: rgb(88, 88, 88);
+   background-color: #ffffff;
 }
+
+.playlist > p:hover{
+    background-color: #f0f0f0;
+ }
 
 /* ---------------------------------- Main ---------------------------------- */
 
