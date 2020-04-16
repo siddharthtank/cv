@@ -1,0 +1,253 @@
+body {
+    background: #333;
+    background-size: cover;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100%;
+    color: #f0f0f0;
+}
+
+/* div{
+    border: red dashed 1px;
+} */
+
+/* --------------------------------- Navbar --------------------------------- */
+.navbar-findcond {
+    background: #212121;
+    padding: 0 20px;
+    height: 50px;
+    border: 1px solid transparent;
+    box-shadow: 0 0 5px rgb(0, 0, 0, 0.12);
+}
+
+.navbar-brand img {
+    display: block;
+    max-height: 30px;
+}
+
+.container-fluid{
+    border-top: solid 1px #333;
+    background-color: #212121;
+}
+
+/* --------------------------------- Navbar --------------------------------- */
+
+
+
+/* ---------------------------------- Main ---------------------------------- */
+
+.video-player{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 10px 10px 10px;
+    background: #212121;
+    border: 1px solid transparent;
+    box-shadow: 0 0 5px rgb(0, 0, 0, 0.12);
+}
+
+.video-section{
+   padding: 0;
+}
+
+.video-container{
+    padding-bottom: 56.25%;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.suresh{
+    min-height: 45px;
+    padding-top: 6px;
+    font-size: 1.1rem ;
+    font-weight: 600;
+}
+
+
+.playlist-section{
+    padding: 0;
+    padding-left: 10px;
+}
+
+.playlist-container{
+    background-color: #212121;
+    position: relative;
+    height: calc(100% - 105px);
+}
+
+.ramesh{
+    height: 60px;
+    width: calc(100% - 1px);
+    border: 1px solid transparent;
+    box-shadow: -2px -2px 5px rgb(0, 0, 0, 0.06);
+    display: block;
+    padding: 5px 10px;
+}
+
+
+.playlist-name{
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    display: block;
+}
+
+.playlist-author{
+    padding: 0;
+    margin: 0;
+    font-size: 0.8rem;
+    display: block;
+}
+
+.playlist{
+    position: absolute;
+    height: 100%;
+    overflow-y: scroll;
+    border: 1px solid transparent;
+    box-shadow: -2px 2px 5px rgb(0, 0, 0, 0.06);
+}
+
+.playlist > p{
+   color: #f0f0f0;
+   padding: 10px;
+   margin-bottom: 5px;
+   background-color: #333;
+}
+
+.playlist > p:hover{
+    background-color: #212121;
+ }
+
+/* ---------------------------------- Main ---------------------------------- */
+
+
+
+/* --------------------------------- Footer --------------------------------- */
+
+.container-fluid{
+    background-color: #212121;
+    color: #f0f0f0;
+}
+
+.footer-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+.footer-container .footer-links > ul{
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.footer-container .footer-links > ul > li{
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.footer-container .footer-links > ul > li > a{
+    color: #f0f0f0;
+    font-size: 100%;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.footer-copyright > br{
+    display: none;
+}
+/* --------------------------------- Footer --------------------------------- */
+
+
+/* ------------------------------- Media Query ------------------------------ */
+@media (max-width: 992px){
+
+    .container{
+        max-width: 768px;
+    }
+/* ---------------------------------- Main ---------------------------------- */
+
+.video-player{
+    margin-top: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+.video-section{
+    background: #333;
+    border: 1px solid transparent;
+    box-shadow: 0 0 5px rgb(0, 0, 0, 0.12);
+    position: fixed;
+    position: relative;
+}
+
+.suresh{
+    margin-bottom: 20px;
+    padding: 5px 10px 0 10px;
+}
+
+
+.playlist-section{
+    margin-top: 10px;
+    height: 50vh;
+}
+.playlist-container{
+    height: 100%;
+}
+
+.playlist{
+    width: 100%;
+    height: calc(100% - 61px);
+}
+
+
+
+
+
+/* ---------------------------------- Main ---------------------------------- */
+
+
+
+
+/* --------------------------------- Footer --------------------------------- */
+    .phone-container{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .footer-container{
+        text-align: center;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .footer-copyright{
+        margin-bottom: 13px;
+
+    }
+
+    .footer-copyright > br{
+        display: block;
+    }
+/* --------------------------------- Footer --------------------------------- */
+
+
+}
+/* ------------------------------- Media Query ------------------------------ */
+
+
