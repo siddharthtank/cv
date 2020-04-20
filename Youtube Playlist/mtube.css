@@ -1,0 +1,335 @@
+/* -------------------------------- Variables ------------------------------- */
+/* -------------------------------- Variables ------------------------------- */
+/* ----------------------------- Default Values ----------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #212121;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+*,
+::after,
+::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+footer,
+header,
+main,
+div,
+nav,
+section {
+  display: block;
+  border: 0.5px dashed red;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* ----------------------------- Default Values ----------------------------- */
+body {
+  background-color: #f0f0f0;
+}
+
+/* --------------------------------- Header --------------------------------- */
+header {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);
+  height: 45px;
+  border: 1px solid transparent;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .container img {
+  display: block;
+  max-height: 30px;
+}
+
+header .container nav {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+header .container nav li {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+header .container nav li:last-child {
+  margin-right: 0;
+}
+
+header .container nav li:hover {
+  color: #ffa200;
+  cursor: pointer;
+}
+
+/* --------------------------------- Header --------------------------------- */
+/* --------------------------------- Footer --------------------------------- */
+footer {
+  background-color: #ffffff;
+  border: 1px solid transparent;
+  margin-top: 20px;
+}
+
+footer .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  height: 100px;
+  place-items: center;
+}
+
+footer .container img {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  max-height: 30px;
+}
+
+footer .container p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+footer .container p img {
+  height: 25px;
+  margin: 0 5px;
+}
+
+/* --------------------------------- Footer --------------------------------- */
+/* ------------------------------ Video-Player ------------------------------ */
+.container .video-player {
+  margin-right: -15px;
+  margin-left: -15px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 64% 36%;
+      grid-template-columns: 64% 36%;
+  margin-top: 65px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+}
+
+.container .video-player .video-section {
+  position: relative;
+}
+
+.container .video-player .video-section .video {
+  padding-bottom: 56.25%;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container .video-player .video-section .video iframe {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-radius: 10px;
+}
+
+.container .video-player .video-section .video-title {
+  min-height: 50px;
+  padding-top: 6px;
+  font-weight: 600;
+}
+
+.container .video-player .playlist-section {
+  position: relative;
+  padding-left: 10px;
+}
+
+.container .video-player .playlist-section .playlist-title {
+  height: 60px;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border: 0.5px rgba(0, 0, 0, 0.12) solid;
+  border-radius: 10px 10px 0 0;
+}
+
+.container .video-player .playlist-section .playlist-title .title {
+  font-weight: 600;
+}
+
+.container .video-player .playlist-section .playlist {
+  position: absolute;
+  height: calc(100% - 60px - 50px);
+  overflow-y: scroll;
+  width: calc(100% - 10px);
+  border: 0.5px rgba(0, 0, 0, 0.12) solid;
+  border-radius: 0 0 10px 10px;
+}
+
+.container .video-player .playlist-section .playlist .video-card {
+  padding: 4px 0;
+  width: 100%;
+}
+
+.container .video-player .playlist-section .playlist .video-card .something {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 24px 100px auto;
+      grid-template-columns: 24px 100px auto;
+  height: 56px;
+}
+
+.container .video-player .playlist-section .playlist .video-card .something .index {
+  height: 100%;
+  text-align: center;
+}
+
+.container .video-player .playlist-section .playlist .video-card .something .video-img {
+  height: 100%;
+  position: relative;
+}
+
+.container .video-player .playlist-section .playlist .video-card .something .video-img img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.container .video-player .playlist-section .playlist .video-card .something .remainder {
+  padding: 0 8px;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1r 0.5fr;
+      grid-template-rows: 1r 0.5fr;
+}
+
+.container .video-player .playlist-section .playlist .video-card .something .remainder h4 {
+  font-size: 0.9rem;
+  line-height: 1rem;
+  font-weight: 500;
+  height: 33px;
+}
+
+.container .video-player .playlist-section .playlist .video-card .something .remainder p {
+  font-size: 0.8rem;
+}
+
+.container .video-player .playlist-section .playlist .video-card:hover {
+  background-color: #f0f0f0;
+}
+
+/* ------------------------------ Video-Player ------------------------------ */
+/* ------------------------------ Media Queries ----------------------------- */
+@media (max-width: 768px) {
+  header .container nav {
+    display: none;
+  }
+  footer {
+    display: none;
+  }
+  .container .video-player {
+    background: #f0f0f0;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    padding: 0;
+    margin-top: 45px;
+    margin-bottom: 10px;
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border-radius: none;
+  }
+  .container .video-player .video-section .video iframe {
+    border-radius: 0;
+  }
+  .container .video-player .video-section .video-title {
+    padding: 6px;
+    background: #ffffff;
+    margin-bottom: 10px;
+  }
+  .container .video-player .playlist-section {
+    height: 300px;
+    padding-left: 0;
+    width: calc(100% - 20px);
+    margin: 0 auto;
+  }
+  .container .video-player .playlist-section .playlist-title {
+    background: #ffffff;
+  }
+  .container .video-player .playlist-section .playlist {
+    height: calc(300px - 60px);
+    background: #ffffff;
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1370px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1570px;
+  }
+}
+
+/* ------------------------------ Media Queries ----------------------------- */
+/*# sourceMappingURL=mtube.css.map */
