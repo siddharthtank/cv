@@ -2,6 +2,7 @@
 html {
   --fonts: 'Roboto';
   --primary: #ffffff;
+  --primary-dark: #d0d0d0;
   --secondary: #f0f0f0;
   --theme-1: #ffa200;
   --button: #e4e4e4;
@@ -14,6 +15,7 @@ html {
 
 html[data-theme='dark'] {
   --primary: #212121;
+  --primary-dark: #111111;
   --secondary: #333333;
   --theme-1: #ffa200;
   --button: #444444;
@@ -278,6 +280,7 @@ footer .container img {
 
 .container .video-player .playlist-section .playlist-title .title {
   font-weight: 600;
+  padding: 0 10px;
 }
 
 .container .video-player .playlist-section .playlist {
@@ -386,7 +389,7 @@ footer .container img {
     margin: 0 auto;
   }
   .container .video-player .playlist-section .playlist-title {
-    background: var(--primary);
+    background: var(--primary-dark);
   }
   .container .video-player .playlist-section .playlist {
     height: calc(300px - 60px);
