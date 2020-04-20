@@ -26,7 +26,6 @@ div,
 nav,
 section {
   display: block;
-  border: 0.5px dashed red;
 }
 
 .container {
