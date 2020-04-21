@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,7 @@
 <!-- ------------------------------- Header -------------------------------- -->
 <header>
     <div class="container">
-        <a href="#"><img src="logo-light.svg" alt="" class="logo" id="header-logo"></a>
+        <a href="#"><img src="logo-dark.svg" alt="" class="logo" id="header-logo"></a>
         <div class="navbar">
             <nav>
                 <ul>
@@ -23,8 +23,11 @@
                 </ul>
             </nav>
             <div class="mode">
-                <p>Mode</p>
-                <input type="checkbox" id="switch" class="switch" name="theme" /><label for="switch"></label>
+                <p>Dark</p>
+                <label class="switch">
+                    <input type="checkbox" checked name="theme">
+                     <span class="slider round"></span>
+                </label>
             </div>
         </div>
     </div>
@@ -46,7 +49,6 @@
                 document.getElementById('header-logo').src='logo-light.svg'
                 document.getElementById('footer-logo').src='logo-light.svg'
             }
-
         });
 
         let trans = () => {
@@ -63,7 +65,7 @@
         <div class="video-player">
             <div class="video-section">
                 <div class="video">
-                    <iframe id="embed" name="link" src="https://www.youtube.com/embed/9Sf278j1GTU?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe id="embed" name="link" src="https://www.youtube.com/embed/9Sf278j1GTU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="video-title" id="title">
                     Lec-01 Introduction
@@ -124,11 +126,15 @@
     </div>
 <!-- ---------------------------- Video Player ----------------------------- -->
 
+<!-- ----------------------------- Movie Cards ----------------------------- -->
+
+<!-- ----------------------------- Movie Cards ----------------------------- -->
+
 <!-- ------------------------------- Footer -------------------------------- -->
     <footer>
         <div class="container">
             <P>&copy; 2020 GATE Metallurgy. All rights received.</P>
-            <img src="logo-light.svg" alt="" id="footer-logo">
+            <img src="logo-dark.svg" alt="" id="footer-logo">
         </div>
     </footer>
 <!-- ------------------------------- Footer -------------------------------- -->
