@@ -329,7 +329,8 @@ footer .container img {
 .container .video-player .playlist-section .playlist .video-card .something .index {
   height: 100%;
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 13px;
+  margin-top: 5px;
 }
 
 .container .video-player .playlist-section .playlist .video-card .something .video-img {
@@ -496,12 +497,8 @@ footer .container img {
     width: calc(100% - 20px);
     margin: 0 auto;
   }
-  .container .video-player .playlist-section .playlist-title {
-    background: var(--primary-dark);
-  }
   .container .video-player .playlist-section .playlist {
     height: calc(300px - 60px);
-    background: var(--primary);
     width: 100%;
   }
   .container .video-player .playlist-section .playlist .title {
