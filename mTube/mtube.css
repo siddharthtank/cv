@@ -2,7 +2,7 @@
 html {
   --fonts: 'Roboto', sans-serif;
   --primary: #ffffff;
-  --primary-dark: #e2e2e2;
+  --primary-dark: #aaaaaa;
   --secondary: #f0f0f0;
   --theme-1: #ffa200;
   --theme-2: #009dff;
@@ -10,7 +10,7 @@ html {
   --color: #212121;
   --radius: 10px;
   --border: 1px solid transparent;
-  --border-light: 0.5px rgba(0, 0, 0, 0.12) solid;
+  --border-light: 1px rgba(0, 0, 0, 0.12) solid;
   --shadow: 0 0 5px rgba(0, 0, 0, 0.12);
 }
 
@@ -22,7 +22,7 @@ html[data-theme='dark'] {
   --button: #444444;
   --color: #f0f0f0;
   --shadow: none;
-  --border-light: 0.5px rgba(255, 255, 255, 0.12) solid;
+  --border-light: 1px rgba(255, 255, 255, 0.12) solid;
 }
 
 /* -------------------------------- Variables ------------------------------- */
@@ -57,8 +57,7 @@ section {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
 }
 
 /* ----------------------------- Default Values ----------------------------- */
@@ -462,6 +461,120 @@ footer .container img {
 }
 
 /* --------------------------- Course Description --------------------------- */
+/* ------------------------------- Course-List ------------------------------ */
+.third-section .container {
+  margin-bottom: 20px;
+}
+
+/* ------------------------------- Course-List ------------------------------ */
+/* --------------------------------- testing -------------------------------- */
+.third-section {
+  margin-top: 40px;
+}
+
+.third-section .container {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.third-section .container h1 {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.third-section .container .cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  list-style: none;
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.third-section .container .cards .cards_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+}
+
+.third-section .container .cards .cards_item .card {
+  border-radius: var(--radius);
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+.third-section .container .cards .cards_item .card img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.third-section .container .cards .cards_item .card .card_content {
+  padding: 15px;
+  background: var(--primary);
+}
+
+.third-section .container .cards .cards_item .card .card_content span {
+  font-size: 13px;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.third-section .container .cards .cards_item .card .card_content span img {
+  height: 18px;
+  width: 18px;
+  margin-left: -2px;
+  margin-right: 2px;
+}
+
+.third-section .container .cards .cards_item .card .card_content h3 {
+  font-size: 16px;
+  line-height: 22px;
+  height: 45px;
+  overflow: hidden;
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+
+.third-section .container .cards .cards_item .card .card_content .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.third-section .container .cards .cards_item .card .card_content .bottom span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-items: center;
+  font-size: 13px;
+  margin: 0;
+}
+
+.third-section .container .cards .cards_item .card .card_content .bottom span img {
+  width: 16px;
+  height: 16px;
+  margin-left: 2px;
+}
+
+/* --------------------------------- testing -------------------------------- */
 /* ------------------------------ Media Queries ----------------------------- */
 @media (max-width: 992px) {
   header .container .navbar nav {
@@ -504,6 +617,9 @@ footer .container img {
   .container .video-player .playlist-section .playlist .title {
     font-size: 12px;
   }
+  .container .video-player .playlist-section .playlist .video-card {
+    width: 100%;
+  }
   .second-section .container .description {
     width: calc(100% + 30px);
     padding: 15px;
@@ -533,9 +649,20 @@ footer .container img {
   }
 }
 
+@media (min-width: 768px) {
+  .third-section .container .cards {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 @media (min-width: 992px) {
   .container {
     max-width: 980px;
+  }
+  .third-section .container .cards {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -543,11 +670,19 @@ footer .container img {
   .container {
     max-width: 1140px;
   }
+  .third-section .container .cards {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 @media (min-width: 1400px) {
   .container {
     max-width: 1370px;
+  }
+  .third-section .container .cards {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 }
 
