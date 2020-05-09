@@ -2,16 +2,17 @@
 html {
   --fonts: 'Roboto', sans-serif;
   --primary: #ffffff;
-  --primary-dark: #aaaaaa;
-  --secondary: #f0f0f0;
+  --primary-dark: #f1f1f1;
+  --secondary: #f8f8f8;
   --theme-1: #ffa200;
-  --theme-2: #009dff;
+  --theme-2: #212121;
+  --theme-3: #009dff;
   --button: #e4e4e4;
   --color: #212121;
+  --color-light: #4e4e4e;
   --radius: 10px;
-  --border: 1px solid transparent;
+  --border: 1px solid #CACACA;
   --border-light: 1px rgba(0, 0, 0, 0.12) solid;
-  --shadow: 0 0 5px rgba(0, 0, 0, 0.12);
 }
 
 html[data-theme='dark'] {
@@ -19,9 +20,13 @@ html[data-theme='dark'] {
   --primary-dark: #111111;
   --secondary: #333333;
   --theme-1: #ffa200;
+  --theme-2: #009dff;
+  --theme-3: #009dff;
   --button: #444444;
   --color: #f0f0f0;
+  --color-light: #dddddd;
   --shadow: none;
+  --border: 1px solid transparent;
   --border-light: 1px rgba(255, 255, 255, 0.12) solid;
 }
 
@@ -290,7 +295,7 @@ footer .container img {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  background: var(--secondary);
+  background: var(--primary-dark);
   border-radius: var(--radius) var(--radius) 0 0;
 }
 
@@ -307,7 +312,7 @@ footer .container img {
   overflow-y: scroll;
   width: calc(100% - 10px);
   border-radius: 0 0 var(--radius) var(--radius);
-  background-color: var(--secondary);
+  background-color: var(--primary-dark);
 }
 
 .container .video-player .playlist-section .playlist .video-card {
@@ -368,7 +373,7 @@ footer .container img {
   margin-top: 3px;
   font-size: 13px;
   line-height: 14px;
-  color: var(--theme-2);
+  color: var(--theme-3);
 }
 
 .container .video-player .playlist-section .playlist .video-card:hover {
@@ -389,12 +394,13 @@ footer .container img {
 }
 
 .second-section .container .description {
-  width: 64%;
+  width: calc(100% - 300px - 20px);
   padding: 30px;
   background: var(--primary);
   border-radius: var(--radius);
   -webkit-box-shadow: var(--shadow);
           box-shadow: var(--shadow);
+  border: var(--border);
 }
 
 .second-section .container .description .infographic {
@@ -442,17 +448,21 @@ footer .container img {
 
 .second-section .container .description .element span {
   font-size: 17px;
+  font-weight: 600;
   color: var(--theme-2);
 }
 
 .second-section .container .description .element p {
+  font-size: 17px;
+  line-height: 23px;
   margin-top: 5px;
+  color: var(--color-light);
   text-align: justify;
 }
 
 .second-section .container .more-info {
   margin-left: auto;
-  width: calc(36% - 10px);
+  width: 300px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -460,11 +470,13 @@ footer .container img {
 
 .second-section .container .more-info .info-1 {
   width: 100%;
+  margin-left: auto;
   background-color: var(--primary);
   border-radius: var(--radius);
   padding: 10px;
   -webkit-box-shadow: var(--shadow);
           box-shadow: var(--shadow);
+  border: var(--border);
 }
 
 .second-section .container .more-info .info-1 .info {
@@ -473,6 +485,11 @@ footer .container img {
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   margin: 12px 0;
+  font-size: 13px;
+}
+
+.second-section .container .more-info .info-1 .info .left {
+  margin-left: 5px;
 }
 
 .second-section .container .more-info .info-1 .info .left span {
@@ -480,7 +497,6 @@ footer .container img {
   display: -ms-flexbox;
   display: flex;
   place-items: center;
-  margin-left: 20px;
 }
 
 .second-section .container .more-info .info-1 .info .left span img {
@@ -489,7 +505,7 @@ footer .container img {
 }
 
 .second-section .container .more-info .info-1 .info .right {
-  margin-left: 20px;
+  margin-left: 5px;
 }
 
 .second-section .container .more-info .info-1 .info .right a {
@@ -502,8 +518,6 @@ footer .container img {
 }
 
 .second-section .container .more-info .info-1 hr {
-  width: 95%;
-  margin: 0 auto;
   height: 0;
   border: 1px solid var(--secondary);
 }
@@ -552,8 +566,7 @@ footer .container img {
 
 .third-section .container .cards .cards_item .card {
   border-radius: var(--radius);
-  -webkit-box-shadow: var(--shadow);
-          box-shadow: var(--shadow);
+  border: var(--border);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -737,7 +750,7 @@ footer .container img {
 
 @media (min-width: 1600px) {
   .container {
-    max-width: 1570px;
+    max-width: 1370px;
   }
   .container .video-player {
     -ms-grid-columns: 70% 30%;
@@ -747,7 +760,11 @@ footer .container img {
     width: 70%;
   }
   .second-section .container .more-info {
-    width: calc(30% - 10px);
+    width: calc(30% - 20px);
+  }
+  .second-section .container .more-info .info-1 .info {
+    font-size: 15px;
+    padding: 5px;
   }
 }
 
