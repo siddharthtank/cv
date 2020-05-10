@@ -489,6 +489,14 @@ footer .container img {
   border: var(--border);
 }
 
+.second-section .container .description h2 {
+  display: none;
+}
+
+.second-section .container .description .infographic {
+  display: none;
+}
+
 .second-section .container .description .element {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -717,30 +725,6 @@ footer .container img {
     margin-bottom: 10px;
   }
   .banner {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-  .banner .container .course-info {
-    padding-right: 10px;
-    padding-left: 10px;
-  }
-  .banner .container .course-info .path {
-    margin: 0;
-  }
-  .banner .container .course-info .title {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    margin-top: 5px;
-  }
-  .banner .container .course-info .title #img {
-    display: none;
-  }
-  .banner .container .course-info .title .infographics h1 {
-    font-size: 22px;
-    line-height: 40px;
-  }
-  .banner .container .course-info .title .infographics p {
     display: none;
   }
   .container .video-player {
@@ -748,7 +732,7 @@ footer .container img {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
     padding: 0;
-    margin-top: 10px;
+    margin-top: 55px;
     margin-bottom: 10px;
     border: none;
     -webkit-box-shadow: none;
@@ -769,6 +753,7 @@ footer .container img {
     padding-left: 0;
     width: calc(100% - 20px);
     margin: 0 auto;
+    border: var(--border);
   }
   .container .video-player .playlist-section .playlist {
     height: calc(300px - 60px);
@@ -787,7 +772,38 @@ footer .container img {
     padding: 0 15px 15px 15px;
   }
   .second-section .container .description h2 {
-    font-size: 19px;
+    display: block;
+    margin-top: 20px;
+    font-weight: 600;
+  }
+  .second-section .container .description .infographic {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-top: 10px;
+    margin-left: -3px;
+    margin-bottom: 30px;
+  }
+  .second-section .container .description .infographic span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    place-items: center;
+    font-size: 15px;
+  }
+  .second-section .container .description .infographic span img {
+    width: 17px;
+    margin-right: 5px;
+  }
+  .second-section .container .description .infographic p {
+    margin: 0 10px;
+    font-size: 17px;
   }
   .second-section .container .description .element p {
     font-size: 15px;
