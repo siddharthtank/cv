@@ -1,8 +1,8 @@
 /* -------------------------------- Variables ------------------------------- */
 html {
-  --fonts: 'Roboto', sans-serif;
+  --fonts: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   --primary: #ffffff;
-  --primary-dark: #f1f1f1;
+  --primary-dark: #e9e9e9;
   --secondary: #f8f8f8;
   --theme-1: #ffa200;
   --theme-2: #212121;
@@ -13,6 +13,7 @@ html {
   --radius: 10px;
   --border: 1px solid #CACACA;
   --border-light: 1px rgba(0, 0, 0, 0.12) solid;
+  --shadow: 0 0 5px rgba(0, 0, 0, 0.24);
 }
 
 html[data-theme='dark'] {
@@ -60,8 +61,6 @@ section {
 
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
   margin: 0 auto;
 }
 
@@ -75,8 +74,7 @@ header {
   background-color: var(--primary);
   -webkit-box-shadow: var(--shadow);
           box-shadow: var(--shadow);
-  height: 45px;
-  border: var(--border);
+  height: 55px;
   display: -ms-grid;
   display: grid;
   place-items: center;
@@ -98,7 +96,7 @@ header .container {
 
 header .container img {
   display: block;
-  max-height: 30px;
+  max-height: 40px;
 }
 
 header .container .navbar {
@@ -117,7 +115,18 @@ header .container .navbar nav {
 
 header .container .navbar nav li {
   display: inline-block;
-  margin: 0 15px;
+}
+
+header .container .navbar nav li a {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 5px 15px;
+  color: var(--color-light);
+}
+
+header .container .navbar nav li a:hover {
+  color: var(--color);
+  background-color: var(--secondary);
 }
 
 header .container .navbar nav li:hover {
@@ -130,10 +139,9 @@ header .container .navbar .mode {
   display: -ms-flexbox;
   display: flex;
   place-items: center;
-  background-color: var(--button);
-  height: 100%;
-  padding: 0 10px;
-  margin-left: 10px;
+  height: 90%;
+  padding: 0 5px;
+  margin-left: 50px;
   border-radius: 20px;
   /* ------------------ Dark mode button ------------------ */
   /* Rounded sliders */
@@ -141,7 +149,7 @@ header .container .navbar .mode {
 }
 
 header .container .navbar .mode p {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 header .container .navbar .mode .switch {
@@ -213,7 +221,6 @@ html.transition *::after {
 /* --------------------------------- Footer --------------------------------- */
 footer {
   background-color: var(--primary);
-  border: var(--border);
   margin-top: 20px;
 }
 
@@ -232,26 +239,107 @@ footer .container img {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  max-height: 30px;
+  max-height: 40px;
 }
 
 /* --------------------------------- Footer --------------------------------- */
+/* --------------------------------- Banner --------------------------------- */
+.banner {
+  height: 330px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#1f70c1), to(black));
+  background-image: linear-gradient(90deg, #1f70c1, black);
+}
+
+.banner .container {
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 55px;
+}
+
+.banner .container .course-info {
+  padding: 15px 0;
+}
+
+.banner .container .course-info .path {
+  width: 100%;
+  margin: 24px 0;
+}
+
+.banner .container .course-info .path a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  place-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+}
+
+.banner .container .course-info .path a img {
+  width: 12px;
+  margin: 0 5px;
+}
+
+.banner .container .course-info .path a:hover {
+  text-decoration: underline;
+}
+
+.banner .container .course-info .title {
+  margin-top: 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 320px auto;
+      grid-template-columns: 320px auto;
+}
+
+.banner .container .course-info .title #img {
+  margin-top: 10px;
+}
+
+.banner .container .course-info .title .infographics h1 {
+  font-size: 34px;
+  line-height: 50px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.banner .container .course-info .title .infographics p {
+  font-size: 15px;
+  line-height: 24px;
+  color: #ffffff;
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+.banner .container .course-info .title .infographics span {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-items: center;
+}
+
+.banner .container .course-info .title .infographics span img {
+  margin: 3px 0;
+  margin-right: 8px;
+  height: 17px;
+}
+
+/* --------------------------------- Banner --------------------------------- */
 /* ------------------------------ Video-Player ------------------------------ */
 .container .video-player {
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-top: 20px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 64% 36%;
       grid-template-columns: 64% 36%;
-  margin-top: 65px;
   margin-bottom: 20px;
-  padding: 15px;
   background: var(--primary);
   border: var(--border);
-  -webkit-box-shadow: var(--shadow);
-          box-shadow: var(--shadow);
-  border-radius: var(--radius);
 }
 
 .container .video-player .video-section {
@@ -273,15 +361,18 @@ footer .container img {
   bottom: 0;
   right: 0;
   left: 0;
-  border-radius: var(--radius);
+  padding: 1px;
 }
 
 .container .video-player .video-section .video-title {
   min-height: 50px;
   padding-top: 15px;
+  padding-left: 30px;
+}
+
+.container .video-player .video-section .video-title #title {
   font-weight: 600;
-  font-size: 16px;
-  padding-left: 15px;
+  font-size: 20px;
 }
 
 .container .video-player .playlist-section {
@@ -295,14 +386,14 @@ footer .container img {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  background: var(--primary-dark);
-  border-radius: var(--radius) var(--radius) 0 0;
+  background-color: var(--primary-dark);
 }
 
 .container .video-player .playlist-section .playlist-title .title {
   padding: 0 15px;
   font-size: 17px;
-  line-height: 19px;
+  font-weight: 600;
+  line-height: 30px;
   text-align: center;
 }
 
@@ -311,7 +402,6 @@ footer .container img {
   height: calc(100% - 50px - 50px);
   overflow-y: scroll;
   width: calc(100% - 10px);
-  border-radius: 0 0 var(--radius) var(--radius);
   background-color: var(--primary-dark);
 }
 
@@ -319,15 +409,14 @@ footer .container img {
   margin: 5px auto;
   width: calc(100% - 10px);
   background-color: var(--primary);
-  border-radius: var(--radius);
 }
 
 .container .video-player .playlist-section .playlist .video-card .something {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 30px 100px auto;
-      grid-template-columns: 30px 100px auto;
-  height: 56px;
+  -ms-grid-columns: 30px 135.7px auto;
+      grid-template-columns: 30px 135.7px auto;
+  height: 76px;
 }
 
 .container .video-player .playlist-section .playlist .video-card .something .index {
@@ -370,14 +459,14 @@ footer .container img {
 }
 
 .container .video-player .playlist-section .playlist .video-card .something .remainder span {
-  margin-top: 3px;
+  margin-top: 10px;
   font-size: 13px;
   line-height: 14px;
   color: var(--theme-3);
 }
 
 .container .video-player .playlist-section .playlist .video-card:hover {
-  background-color: var(--secondary);
+  background-color: var(--primary-dark);
 }
 
 /* ------------------------------ Video-Player ------------------------------ */
@@ -395,44 +484,9 @@ footer .container img {
 
 .second-section .container .description {
   width: calc(100% - 300px - 20px);
-  padding: 30px;
+  padding: 10px 30px 30px 30px;
   background: var(--primary);
-  border-radius: var(--radius);
-  -webkit-box-shadow: var(--shadow);
-          box-shadow: var(--shadow);
   border: var(--border);
-}
-
-.second-section .container .description .infographic {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin-top: 10px;
-  margin-left: -3px;
-}
-
-.second-section .container .description .infographic span {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  place-items: center;
-  font-size: 15px;
-}
-
-.second-section .container .description .infographic span img {
-  width: 19px;
-  margin-right: 5px;
-}
-
-.second-section .container .description .infographic p {
-  margin: 0 10px;
-  font-size: 19px;
 }
 
 .second-section .container .description .element {
@@ -472,10 +526,7 @@ footer .container img {
   width: 100%;
   margin-left: auto;
   background-color: var(--primary);
-  border-radius: var(--radius);
   padding: 10px;
-  -webkit-box-shadow: var(--shadow);
-          box-shadow: var(--shadow);
   border: var(--border);
 }
 
@@ -532,6 +583,9 @@ footer .container img {
 /* --------------------------------- cards -------------------------------- */
 .third-section {
   margin-top: 40px;
+  border: var(--border);
+  background-color: var(--primary);
+  padding: 10px 0 40px 0;
 }
 
 .third-section .container {
@@ -541,7 +595,8 @@ footer .container img {
 
 .third-section .container h1 {
   font-size: 24px;
-  font-weight: 400;
+  line-height: 44px;
+  font-weight: 600;
   text-align: center;
 }
 
@@ -639,10 +694,53 @@ footer .container img {
 /* --------------------------------- cards -------------------------------- */
 /* ------------------------------ Media Queries ----------------------------- */
 @media (max-width: 992px) {
+  header .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   header .container .navbar nav {
     display: none;
   }
-  footer {
+  footer .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  footer .container img {
+    margin-bottom: 10px;
+  }
+  .banner {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .banner .container .course-info {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .banner .container .course-info .path {
+    margin: 0;
+  }
+  .banner .container .course-info .title {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    margin-top: 5px;
+  }
+  .banner .container .course-info .title #img {
+    display: none;
+  }
+  .banner .container .course-info .title .infographics h1 {
+    font-size: 22px;
+    line-height: 40px;
+  }
+  .banner .container .course-info .title .infographics p {
     display: none;
   }
   .container .video-player {
@@ -650,7 +748,7 @@ footer .container img {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
     padding: 0;
-    margin-top: 45px;
+    margin-top: 10px;
     margin-bottom: 10px;
     border: none;
     -webkit-box-shadow: none;
@@ -683,24 +781,13 @@ footer .container img {
     width: 100%;
   }
   .second-section .container .description {
+    margin-left: 10px;
+    margin-right: 10px;
     width: calc(100% + 30px);
-    padding: 15px;
+    padding: 0 15px 15px 15px;
   }
   .second-section .container .description h2 {
     font-size: 19px;
-  }
-  .second-section .container .description .infographic {
-    margin-top: 2px;
-  }
-  .second-section .container .description .infographic span {
-    font-size: 13px;
-  }
-  .second-section .container .description .infographic span img {
-    width: 16px;
-    margin-right: 2px;
-  }
-  .second-section .container .description .infographic p {
-    margin: 0 5px;
   }
   .second-section .container .description .element p {
     font-size: 15px;
@@ -750,7 +837,7 @@ footer .container img {
 
 @media (min-width: 1600px) {
   .container {
-    max-width: 1370px;
+    max-width: 1440px;
   }
   .container .video-player {
     -ms-grid-columns: 70% 30%;
