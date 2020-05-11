@@ -66,7 +66,7 @@ section {
 
 /* ----------------------------- Default Values ----------------------------- */
 body {
-  background-color: var(--secondary);
+  background-color: var(--primary);
 }
 
 /* --------------------------------- Header --------------------------------- */
@@ -245,9 +245,9 @@ footer .container img {
 /* --------------------------------- Footer --------------------------------- */
 /* --------------------------------- Banner --------------------------------- */
 .banner {
-  height: 330px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#1f70c1), to(black));
-  background-image: linear-gradient(90deg, #1f70c1, black);
+  height: 300px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#1658a3), to(#0b2555));
+  background-image: linear-gradient(90deg, #1658a3, #0b2555);
 }
 
 .banner .container {
@@ -263,7 +263,7 @@ footer .container img {
 
 .banner .container .course-info .path {
   width: 100%;
-  margin: 24px 0;
+  margin: 15px 0;
 }
 
 .banner .container .course-info .path a {
@@ -271,7 +271,7 @@ footer .container img {
   width: -moz-fit-content;
   width: fit-content;
   place-items: center;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.2px;
   color: #ffffff;
@@ -287,7 +287,7 @@ footer .container img {
 }
 
 .banner .container .course-info .title {
-  margin-top: 30px;
+  margin-top: 10px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 320px auto;
@@ -295,7 +295,7 @@ footer .container img {
 }
 
 .banner .container .course-info .title #img {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .banner .container .course-info .title .infographics h1 {
@@ -306,11 +306,12 @@ footer .container img {
 }
 
 .banner .container .course-info .title .infographics p {
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 20px;
   color: #ffffff;
-  width: 80%;
-  margin-bottom: 10px;
+  margin-bottom: 28px;
+  -webkit-filter: opacity(80%);
+          filter: opacity(80%);
 }
 
 .banner .container .course-info .title .infographics span {
@@ -339,7 +340,7 @@ footer .container img {
       grid-template-columns: 64% 36%;
   margin-bottom: 20px;
   background: var(--primary);
-  border: var(--border);
+  border-radius: var(--radius);
 }
 
 .container .video-player .video-section {
@@ -362,6 +363,7 @@ footer .container img {
   right: 0;
   left: 0;
   padding: 1px;
+  border-radius: var(--radius);
 }
 
 .container .video-player .video-section .video-title {
@@ -387,6 +389,7 @@ footer .container img {
   display: grid;
   place-items: center;
   background-color: var(--primary-dark);
+  border-radius: var(--radius) var(--radius) 0 0;
 }
 
 .container .video-player .playlist-section .playlist-title .title {
@@ -403,10 +406,11 @@ footer .container img {
   overflow-y: scroll;
   width: calc(100% - 10px);
   background-color: var(--primary-dark);
+  border-radius: 0 0 var(--radius) var(--radius);
 }
 
 .container .video-player .playlist-section .playlist .video-card {
-  margin: 5px auto;
+  margin: 0 auto;
   width: calc(100% - 10px);
   background-color: var(--primary);
 }
@@ -414,9 +418,10 @@ footer .container img {
 .container .video-player .playlist-section .playlist .video-card .something {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 30px 135.7px auto;
-      grid-template-columns: 30px 135.7px auto;
-  height: 76px;
+  -ms-grid-columns: 30px 107.17px auto;
+      grid-template-columns: 30px 107.17px auto;
+  height: 60px;
+  margin: 5px 0;
 }
 
 .container .video-player .playlist-section .playlist .video-card .something .index {
@@ -453,16 +458,18 @@ footer .container img {
   margin-top: 5px;
   font-size: 14px;
   line-height: 16px;
+  font-weight: 600;
   max-height: 32px;
+  padding-right: 3px;
   overflow: hidden;
   text-overflow: clip;
 }
 
 .container .video-player .playlist-section .playlist .video-card .something .remainder span {
-  margin-top: 10px;
-  font-size: 13px;
-  line-height: 14px;
-  color: var(--theme-3);
+  margin-top: 3px;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--color);
 }
 
 .container .video-player .playlist-section .playlist .video-card:hover {
@@ -485,8 +492,7 @@ footer .container img {
 .second-section .container .description {
   width: calc(100% - 300px - 20px);
   padding: 10px 30px 30px 30px;
-  background: var(--primary);
-  border: var(--border);
+  border-radius: var(--radius);
 }
 
 .second-section .container .description h2 {
@@ -498,28 +504,53 @@ footer .container img {
 }
 
 .second-section .container .description .element {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60px auto;
+      grid-template-columns: 60px auto;
   margin-top: 20px;
 }
 
+.second-section .container .description .element .icons {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #5064B1;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-items: center;
+}
+
+.second-section .container .description .element .icons img {
+  margin: 0 auto;
+  width: 22px;
+  height: 22px;
+  -webkit-filter: invert(100);
+          filter: invert(100);
+}
+
 .second-section .container .description .element span {
-  font-size: 17px;
+  font-size: 22px;
+  line-height: 36px;
   font-weight: 600;
-  color: var(--theme-2);
+  color: #5064B1;
 }
 
 .second-section .container .description .element p {
-  font-size: 17px;
-  line-height: 23px;
-  margin-top: 5px;
-  color: var(--color-light);
+  font-size: 15px;
+  line-height: 20px;
+  margin-top: 10px;
+  color: var(--color);
   text-align: justify;
+}
+
+.second-section .container .description .element ul, .second-section .container .description .element ol {
+  font-size: 15px;
+  line-height: 20px;
+  margin-top: 10px;
+  color: var(--color);
+  margin-left: 30px;
 }
 
 .second-section .container .more-info {
@@ -536,6 +567,7 @@ footer .container img {
   background-color: var(--primary);
   padding: 10px;
   border: var(--border);
+  border-radius: var(--radius);
 }
 
 .second-section .container .more-info .info-1 .info {
@@ -591,8 +623,7 @@ footer .container img {
 /* --------------------------------- cards -------------------------------- */
 .third-section {
   margin-top: 40px;
-  border: var(--border);
-  background-color: var(--primary);
+  background-color: var(--secondary);
   padding: 10px 0 40px 0;
 }
 
@@ -670,6 +701,7 @@ footer .container img {
   font-size: 16px;
   line-height: 22px;
   height: 45px;
+  font-weight: 600;
   overflow: hidden;
   margin-top: 2px;
   margin-bottom: 10px;
@@ -804,6 +836,13 @@ footer .container img {
   .second-section .container .description .infographic p {
     margin: 0 10px;
     font-size: 17px;
+  }
+  .second-section .container .description .element {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+  .second-section .container .description .element .icons {
+    display: none;
   }
   .second-section .container .description .element p {
     font-size: 15px;
