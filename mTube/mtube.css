@@ -27,7 +27,7 @@ html[data-theme='dark'] {
   --color: #f0f0f0;
   --color-light: #dddddd;
   --shadow: none;
-  --border: 1px solid transparent;
+  --border: 1px solid #333333;
   --border-light: 1px rgba(255, 255, 255, 0.12) solid;
 }
 
@@ -339,7 +339,7 @@ footer .container img {
   -ms-grid-columns: 64% 36%;
       grid-template-columns: 64% 36%;
   margin-bottom: 50px;
-  border-radius: var(--radius);
+  background: var(--primary);
 }
 
 .first-section .container .video-player .video-section {
@@ -376,7 +376,10 @@ footer .container img {
 
 .first-section .container .video-player .playlist-section {
   position: relative;
-  padding-left: 10px;
+  margin-left: 10px;
+  border: var(--border);
+  border-radius: var(--radius);
+  height: calc(100% - 50px);
 }
 
 .first-section .container .video-player .playlist-section .playlist-title {
@@ -399,16 +402,16 @@ footer .container img {
 
 .first-section .container .video-player .playlist-section .playlist {
   position: absolute;
-  height: calc(100% - 50px - 50px);
+  height: calc(100% - 50px);
   overflow-y: scroll;
-  width: calc(100% - 10px);
-  background-color: var(--primary-dark);
+  width: 100%;
+  background-color: var(--primary);
   border-radius: 0 0 var(--radius) var(--radius);
 }
 
 .first-section .container .video-player .playlist-section .playlist .video-card {
   margin: 0 auto;
-  width: calc(100% - 10px);
+  width: 100%;
   background-color: var(--primary);
 }
 
@@ -489,6 +492,7 @@ footer .container img {
 .second-section .container .description {
   width: calc(100% - 300px - 20px);
   padding: 10px 30px 30px 20px;
+  background: var(--primary);
   border: var(--border);
   border-radius: var(--radius);
 }
@@ -818,7 +822,6 @@ footer .container img {
     padding-left: 0;
     width: calc(100% - 20px);
     margin: 0 auto;
-    border: var(--border);
   }
   .first-section .container .video-player .playlist-section .playlist {
     height: calc(300px - 60px);
