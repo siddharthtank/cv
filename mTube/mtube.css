@@ -3,7 +3,7 @@ html {
   --fonts: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   --primary: #ffffff;
   --primary-dark: #e9e9e9;
-  --secondary: #f8f8f8;
+  --secondary: #f5f5f5;
   --theme-1: #ffa200;
   --theme-2: #212121;
   --theme-3: #009dff;
@@ -41,6 +41,7 @@ html[data-theme='dark'] {
   text-decoration: none;
   font-weight: 400;
   line-height: 22px;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -125,7 +126,7 @@ header .container .navbar nav li a {
 }
 
 header .container .navbar nav li a:hover {
-  color: var(--color);
+  color: var(--theme-1);
   background-color: var(--secondary);
 }
 
@@ -245,9 +246,8 @@ footer .container img {
 /* --------------------------------- Footer --------------------------------- */
 /* --------------------------------- Banner --------------------------------- */
 .banner {
-  height: 300px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#1658a3), to(#0b2555));
-  background-image: linear-gradient(90deg, #1658a3, #0b2555);
+  height: 550px;
+  padding: 40px 0;
 }
 
 .banner .container {
@@ -258,12 +258,12 @@ footer .container img {
 }
 
 .banner .container .course-info {
-  padding: 15px 0;
+  margin-top: 50px;
 }
 
 .banner .container .course-info .path {
   width: 100%;
-  margin: 15px 0;
+  margin-bottom: 50px;
 }
 
 .banner .container .course-info .path a {
@@ -290,8 +290,6 @@ footer .container img {
   margin-top: 10px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 320px auto;
-      grid-template-columns: 320px auto;
 }
 
 .banner .container .course-info .title #img {
@@ -299,17 +297,18 @@ footer .container img {
 }
 
 .banner .container .course-info .title .infographics h1 {
-  font-size: 34px;
+  font-size: 36px;
   line-height: 50px;
   font-weight: 700;
   color: #ffffff;
+  font-family: 'Open sans';
 }
 
 .banner .container .course-info .title .infographics p {
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 24px;
+  line-height: 30px;
   color: #ffffff;
-  margin-bottom: 28px;
+  margin-bottom: 50px;
   -webkit-filter: opacity(80%);
           filter: opacity(80%);
 }
@@ -322,6 +321,7 @@ footer .container img {
   display: -ms-flexbox;
   display: flex;
   place-items: center;
+  line-height: 30px;
 }
 
 .banner .container .course-info .title .infographics span img {
@@ -332,29 +332,28 @@ footer .container img {
 
 /* --------------------------------- Banner --------------------------------- */
 /* ------------------------------ Video-Player ------------------------------ */
-.container .video-player {
-  margin-top: 20px;
+.first-section .container .video-player {
+  margin-top: 30px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 64% 36%;
       grid-template-columns: 64% 36%;
-  margin-bottom: 20px;
-  background: var(--primary);
+  margin-bottom: 50px;
   border-radius: var(--radius);
 }
 
-.container .video-player .video-section {
+.first-section .container .video-player .video-section {
   position: relative;
 }
 
-.container .video-player .video-section .video {
+.first-section .container .video-player .video-section .video {
   padding-bottom: 56.25%;
   position: relative;
   width: 100%;
   margin: 0 auto;
 }
 
-.container .video-player .video-section .video iframe {
+.first-section .container .video-player .video-section .video iframe {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -363,26 +362,24 @@ footer .container img {
   right: 0;
   left: 0;
   padding: 1px;
-  border-radius: var(--radius);
 }
 
-.container .video-player .video-section .video-title {
+.first-section .container .video-player .video-section .video-title {
   min-height: 50px;
-  padding-top: 15px;
-  padding-left: 30px;
+  padding-top: 10px;
 }
 
-.container .video-player .video-section .video-title #title {
+.first-section .container .video-player .video-section .video-title #title {
   font-weight: 600;
   font-size: 20px;
 }
 
-.container .video-player .playlist-section {
+.first-section .container .video-player .playlist-section {
   position: relative;
   padding-left: 10px;
 }
 
-.container .video-player .playlist-section .playlist-title {
+.first-section .container .video-player .playlist-section .playlist-title {
   height: 50px;
   width: 100%;
   display: -ms-grid;
@@ -392,15 +389,15 @@ footer .container img {
   border-radius: var(--radius) var(--radius) 0 0;
 }
 
-.container .video-player .playlist-section .playlist-title .title {
+.first-section .container .video-player .playlist-section .playlist-title .title {
   padding: 0 15px;
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 30px;
   text-align: center;
 }
 
-.container .video-player .playlist-section .playlist {
+.first-section .container .video-player .playlist-section .playlist {
   position: absolute;
   height: calc(100% - 50px - 50px);
   overflow-y: scroll;
@@ -409,13 +406,13 @@ footer .container img {
   border-radius: 0 0 var(--radius) var(--radius);
 }
 
-.container .video-player .playlist-section .playlist .video-card {
+.first-section .container .video-player .playlist-section .playlist .video-card {
   margin: 0 auto;
   width: calc(100% - 10px);
   background-color: var(--primary);
 }
 
-.container .video-player .playlist-section .playlist .video-card .something {
+.first-section .container .video-player .playlist-section .playlist .video-card .something {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 30px 107.17px auto;
@@ -424,25 +421,25 @@ footer .container img {
   margin: 5px 0;
 }
 
-.container .video-player .playlist-section .playlist .video-card .something .index {
+.first-section .container .video-player .playlist-section .playlist .video-card .something .index {
   height: 100%;
   text-align: center;
   font-size: 13px;
   margin-top: 5px;
 }
 
-.container .video-player .playlist-section .playlist .video-card .something .video-img {
+.first-section .container .video-player .playlist-section .playlist .video-card .something .video-img {
   height: 100%;
   position: relative;
 }
 
-.container .video-player .playlist-section .playlist .video-card .something .video-img img {
+.first-section .container .video-player .playlist-section .playlist .video-card .something .video-img img {
   position: absolute;
   width: 100%;
   height: 100%;
 }
 
-.container .video-player .playlist-section .playlist .video-card .something .remainder {
+.first-section .container .video-player .playlist-section .playlist .video-card .something .remainder {
   padding-left: 6px;
   width: 100%;
   display: -webkit-box;
@@ -454,7 +451,7 @@ footer .container img {
           flex-direction: column;
 }
 
-.container .video-player .playlist-section .playlist .video-card .something .remainder p {
+.first-section .container .video-player .playlist-section .playlist .video-card .something .remainder p {
   margin-top: 5px;
   font-size: 14px;
   line-height: 16px;
@@ -465,14 +462,14 @@ footer .container img {
   text-overflow: clip;
 }
 
-.container .video-player .playlist-section .playlist .video-card .something .remainder span {
+.first-section .container .video-player .playlist-section .playlist .video-card .something .remainder span {
   margin-top: 3px;
   font-size: 12px;
   line-height: 15px;
   color: var(--color);
 }
 
-.container .video-player .playlist-section .playlist .video-card:hover {
+.first-section .container .video-player .playlist-section .playlist .video-card:hover {
   background-color: var(--primary-dark);
 }
 
@@ -759,9 +756,42 @@ footer .container img {
     margin-bottom: 10px;
   }
   .banner {
-    display: none;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 20px 0 30px 0;
   }
-  .container .video-player {
+  .banner .container {
+    padding: 0 15px;
+  }
+  .banner .container .course-info .path {
+    margin-bottom: 20px;
+  }
+  .banner .container .course-info .path a {
+    font-size: 12px;
+  }
+  .banner .container .course-info .title {
+    margin-top: 30px;
+    display: -ms-grid;
+    display: grid;
+  }
+  .banner .container .course-info .title .infographics h1 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .banner .container .course-info .title .infographics p {
+    font-size: 18px;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+  .banner .container .course-info .title .infographics span {
+    font-size: 12px;
+    line-height: 25px;
+  }
+  .banner .container .course-info .title .infographics span img {
+    height: 15px;
+  }
+  .first-section .container .video-player {
     background: var(--secondary);
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
@@ -772,31 +802,32 @@ footer .container img {
     -webkit-box-shadow: none;
             box-shadow: none;
     border-radius: none;
+    margin-top: 15px;
   }
-  .container .video-player .video-section .video iframe {
+  .first-section .container .video-player .video-section .video iframe {
     border-radius: 0;
   }
-  .container .video-player .video-section .video-title {
+  .first-section .container .video-player .video-section .video-title {
     padding: 10px;
     background: var(--primary);
     margin-bottom: 10px;
     font-size: 14px;
   }
-  .container .video-player .playlist-section {
+  .first-section .container .video-player .playlist-section {
     height: 300px;
     padding-left: 0;
     width: calc(100% - 20px);
     margin: 0 auto;
     border: var(--border);
   }
-  .container .video-player .playlist-section .playlist {
+  .first-section .container .video-player .playlist-section .playlist {
     height: calc(300px - 60px);
     width: 100%;
   }
-  .container .video-player .playlist-section .playlist .title {
+  .first-section .container .video-player .playlist-section .playlist .title {
     font-size: 12px;
   }
-  .container .video-player .playlist-section .playlist .video-card {
+  .first-section .container .video-player .playlist-section .playlist .video-card {
     width: 100%;
   }
   .second-section .container .description {
