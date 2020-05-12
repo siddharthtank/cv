@@ -624,7 +624,7 @@ footer .container img {
 /* --------------------------------- cards -------------------------------- */
 .third-section {
   margin-top: 40px;
-  background-color: var(--secondary);
+  background-color: #E2FBFA;
   padding: 10px 0 40px 0;
 }
 
@@ -634,10 +634,11 @@ footer .container img {
 }
 
 .third-section .container h1 {
-  font-size: 24px;
-  line-height: 44px;
+  font-size: 34px;
+  line-height: 50px;
   font-weight: 600;
   text-align: center;
+  margin: 20px 0;
 }
 
 .third-section .container .cards {
