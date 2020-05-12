@@ -491,7 +491,8 @@ footer .container img {
 
 .second-section .container .description {
   width: calc(100% - 300px - 20px);
-  padding: 10px 30px 30px 30px;
+  padding: 10px 30px 30px 20px;
+  border: var(--border);
   border-radius: var(--radius);
 }
 
