@@ -326,11 +326,16 @@ footer .container img {
 
 .banner .container .course-info .title .infographics a {
   width: 100%;
+  font-size: 15px;
+  font-weight: 600;
+  color: #d8d8d8;
+  cursor: default;
 }
 
 .banner .container .course-info .title .infographics a button {
   margin-top: 30px;
-  padding: 10px 24px;
+  margin-right: 15px;
+  padding: 18px 24px;
   font-size: 15px;
   font-weight: 600;
   color: #ffffff;
@@ -339,11 +344,15 @@ footer .container img {
   cursor: pointer;
 }
 
+.banner .container .course-info .title .infographics a button:hover {
+  background: #034d00;
+}
+
 /* --------------------------------- Banner --------------------------------- */
 /* ------------------------------ Video-Player ------------------------------ */
 .first-section {
   background: var(--primary-div);
-  padding: 75px 0 10px 0;
+  padding: 10px 0 10px 0;
   margin-top: calc(550px + 55px);
 }
 
@@ -495,7 +504,7 @@ footer .container img {
 }
 
 .first-section .container .video-player .playlist-section .playlist .video-card:hover {
-  background-color: var(--primary-dark);
+  background-color: var(--secondary);
 }
 
 /* ------------------------------ Video-Player ------------------------------ */
@@ -824,12 +833,15 @@ footer .container img {
   .banner .container .course-info .title .infographics span img {
     height: 15px;
   }
+  .banner .container .course-info .title .infographics a {
+    display: none;
+  }
   .banner .container .course-info .title .infographics button {
     display: none;
   }
   .first-section {
-    padding: 25px 0 0 0;
-    margin-top: calc(330px + 55px);
+    padding: 20px 0 0 0;
+    margin-top: calc(330px + 45px);
   }
   .first-section .container {
     display: block;
@@ -839,12 +851,10 @@ footer .container img {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
     padding: 0;
-    margin-top: 55px;
     border: none;
     -webkit-box-shadow: none;
             box-shadow: none;
     border-radius: none;
-    margin-top: 15px;
   }
   .first-section .container .video-player .video-section .video iframe {
     border-radius: 0;
@@ -883,6 +893,7 @@ footer .container img {
     display: block;
     margin-top: 20px;
     font-weight: 600;
+    letter-spacing: 0.3px;
   }
   .second-section .container .description .infographic {
     display: -webkit-box;
@@ -906,7 +917,7 @@ footer .container img {
     font-size: 15px;
   }
   .second-section .container .description .infographic span img {
-    width: 17px;
+    width: 16px;
     margin-right: 5px;
   }
   .second-section .container .description .infographic p {
@@ -923,6 +934,7 @@ footer .container img {
   .second-section .container .description .element p {
     font-size: 15px;
     line-height: 20px;
+    margin-top: 2px;
   }
   .second-section .container .more-info {
     display: none;

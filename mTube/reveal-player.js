@@ -1,13 +1,16 @@
 $(document).ready(function() {
     $('#start-course').on('click', function() {
-        $('#video-player').show(200);
+
+        $('#first-section').css("padding", "85px 0 10px 0"); 
+        $('#video-player').show(); 
+
         var target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.substr(1) +']');
         if (target.length) {
           $('html,body').animate({
               scrollTop: target.offset().top
-          }, 800);
+          }, "slow");
           return false;
-        };
+        };        
     });
-  });
+});
