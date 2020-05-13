@@ -823,9 +823,15 @@ footer .container img {
   .banner .container .course-info .title .infographics span img {
     height: 15px;
   }
+  .banner .container .course-info .title .infographics button {
+    display: none;
+  }
   .first-section {
     padding: 25px 0 0 0;
     margin-top: calc(350px + 55px);
+  }
+  .first-section .container {
+    display: block;
   }
   .first-section .container .video-player {
     background: var(--secondary);
