@@ -72,22 +72,30 @@
         </div>
         <div class="title">
             <div class="infographics">
-                <h1>Principles of Physical Metallurgy</h1>
+                <h1>Principles of Physical Metallurgy Infrographic Mrthjnsgn</h1>
                 <!-- <p>A basic understanding of the underlying principles that determine the evolution of microstructures in metals and alloys.</p>   -->
                 <p>IIT Kharagpur</p>
                 <span><img data-src="icons/man-white.png"> Prof. R. N. Ghosh</span>
                 <span><img data-src="icons/university-white.png"> Department of Metallurgical and Materials Engineering</span>
                 <span><img data-src="icons/verified-white.png" >NPTEL</span>
+                <button onclick="revealDiv()"><a href="#first-section">START COURSE</a></button>
             </div>
         </div>
     </div>
   </div>
 </section>
+
+<script>
+  function revealDiv(){
+    var x = document.getElementById("video-player");
+    x.style.display = "block";
+  }
+</script>
 <!-- ------------------------------- Banner -------------------------------- -->
 
 <!-- ---------------------------- Video Player ----------------------------- -->
-<section class="first-section">
-    <div class="container">
+<section class="first-section" id="first-section">
+    <div class="container" id="video-player">
         <div class="video-player">
             <div class="video-section">
                 <div class="video">
@@ -237,7 +245,7 @@
                     </div>
                 </div>
             </div>
-    
+          
             <!-- ------------------------------ More-Info ------------------------------ -->
             <div class="more-info">
                 <div class="info-1">

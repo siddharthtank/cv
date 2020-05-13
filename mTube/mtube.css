@@ -2,7 +2,7 @@
 html {
   --fonts: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   --primary: #ffffff;
-  --primary-dark: #e9e9e9;
+  --primary-div: #ffffff;
   --secondary: #f5f5f5;
   --theme-1: #ffa200;
   --theme-2: #212121;
@@ -13,12 +13,12 @@ html {
   --radius: 10px;
   --border: 1px solid #CACACA;
   --border-light: 1px rgba(0, 0, 0, 0.12) solid;
-  --shadow: 0 0 5px rgba(0, 0, 0, 0.24);
+  --shadow: 0 0 10px rgba(0, 0, 0, 0.12);
 }
 
 html[data-theme='dark'] {
   --primary: #212121;
-  --primary-dark: #111111;
+  --primary-div: #333333;
   --secondary: #333333;
   --theme-1: #ffa200;
   --theme-2: #009dff;
@@ -248,13 +248,17 @@ footer .container img {
 .banner {
   height: 550px;
   padding: 40px 0;
+  position: fixed;
+  top: 55px;
+  left: 0;
+  right: 0;
+  z-index: -10000000;
 }
 
 .banner .container {
   padding: 0;
   margin: 0 auto;
   width: 100%;
-  margin-top: 55px;
 }
 
 .banner .container .course-info {
@@ -284,16 +288,6 @@ footer .container img {
 
 .banner .container .course-info .path a:hover {
   text-decoration: underline;
-}
-
-.banner .container .course-info .title {
-  margin-top: 10px;
-  display: -ms-grid;
-  display: grid;
-}
-
-.banner .container .course-info .title #img {
-  margin-top: 15px;
 }
 
 .banner .container .course-info .title .infographics h1 {
@@ -330,16 +324,42 @@ footer .container img {
   height: 17px;
 }
 
+.banner .container .course-info .title .infographics button {
+  margin-top: 20px;
+  padding: 8px 24px;
+  background: #059600;
+  border: none;
+  cursor: pointer;
+}
+
+.banner .container .course-info .title .infographics button a {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
 /* --------------------------------- Banner --------------------------------- */
 /* ------------------------------ Video-Player ------------------------------ */
+.first-section {
+  background: var(--primary-div);
+  padding: 75px 0 10px 0;
+  margin-top: calc(550px + 55px);
+}
+
+.first-section .container {
+  display: none;
+}
+
 .first-section .container .video-player {
-  margin-top: 30px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 64% 36%;
       grid-template-columns: 64% 36%;
-  margin-bottom: 50px;
   background: var(--primary);
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  padding: 20px;
 }
 
 .first-section .container .video-player .video-section {
@@ -377,7 +397,8 @@ footer .container img {
 .first-section .container .video-player .playlist-section {
   position: relative;
   margin-left: 10px;
-  border: var(--border);
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
   border-radius: var(--radius);
   height: calc(100% - 50px);
 }
@@ -478,13 +499,17 @@ footer .container img {
 
 /* ------------------------------ Video-Player ------------------------------ */
 /* --------------------------- Course Description --------------------------- */
+.second-section {
+  background: var(--primary-div);
+  padding: 20px 0 30px 0;
+}
+
 .second-section .container {
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  margin-bottom: 20px;
   /* -------------------------------- More-Info ------------------------------- */
   /* -------------------------------- More-Info ------------------------------- */
 }
@@ -493,7 +518,8 @@ footer .container img {
   width: calc(100% - 300px - 20px);
   padding: 10px 30px 30px 20px;
   background: var(--primary);
-  border: var(--border);
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
   border-radius: var(--radius);
 }
 
@@ -542,7 +568,7 @@ footer .container img {
 .second-section .container .description .element p {
   font-size: 15px;
   line-height: 20px;
-  margin-top: 10px;
+  margin-top: 8px;
   color: var(--color);
   text-align: justify;
 }
@@ -568,7 +594,8 @@ footer .container img {
   margin-left: auto;
   background-color: var(--primary);
   padding: 10px;
-  border: var(--border);
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
   border-radius: var(--radius);
 }
 
@@ -616,17 +643,10 @@ footer .container img {
 }
 
 /* --------------------------- Course Description --------------------------- */
-/* ------------------------------- Course-List ------------------------------ */
-.third-section .container {
-  margin-bottom: 20px;
-}
-
-/* ------------------------------- Course-List ------------------------------ */
 /* --------------------------------- cards -------------------------------- */
 .third-section {
-  margin-top: 40px;
-  background-color: #E2FBFA;
-  padding: 10px 0 40px 0;
+  padding: 30px 0;
+  background: var(--primary-div);
 }
 
 .third-section .container {
@@ -737,9 +757,15 @@ footer .container img {
 /* --------------------------------- cards -------------------------------- */
 /* ------------------------------ Media Queries ----------------------------- */
 @media (max-width: 992px) {
+  header {
+    height: 45px;
+  }
   header .container {
     padding-left: 15px;
     padding-right: 15px;
+  }
+  header .container img {
+    max-height: 30px;
   }
   header .container .navbar nav {
     display: none;
@@ -760,13 +786,15 @@ footer .container img {
     margin-bottom: 10px;
   }
   .banner {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+    height: 350px;
     padding: 20px 0 30px 0;
+    top: 45px;
   }
   .banner .container {
     padding: 0 15px;
+  }
+  .banner .container .course-info {
+    margin-top: 0;
   }
   .banner .container .course-info .path {
     margin-bottom: 20px;
@@ -795,13 +823,16 @@ footer .container img {
   .banner .container .course-info .title .infographics span img {
     height: 15px;
   }
+  .first-section {
+    padding: 25px 0 0 0;
+    margin-top: calc(350px + 55px);
+  }
   .first-section .container .video-player {
     background: var(--secondary);
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
     padding: 0;
     margin-top: 55px;
-    margin-bottom: 10px;
     border: none;
     -webkit-box-shadow: none;
             box-shadow: none;
@@ -814,17 +845,16 @@ footer .container img {
   .first-section .container .video-player .video-section .video-title {
     padding: 10px;
     background: var(--primary);
-    margin-bottom: 10px;
     font-size: 14px;
   }
   .first-section .container .video-player .playlist-section {
     height: 300px;
     padding-left: 0;
     width: calc(100% - 20px);
-    margin: 0 auto;
+    margin: 15px auto;
   }
   .first-section .container .video-player .playlist-section .playlist {
-    height: calc(300px - 60px);
+    height: calc(300px - 54px);
     width: 100%;
   }
   .first-section .container .video-player .playlist-section .playlist .title {
@@ -832,6 +862,9 @@ footer .container img {
   }
   .first-section .container .video-player .playlist-section .playlist .video-card {
     width: 100%;
+  }
+  .second-section {
+    padding-top: 20px;
   }
   .second-section .container .description {
     margin-left: 10px;
