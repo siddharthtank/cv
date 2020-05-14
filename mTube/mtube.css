@@ -1,38 +1,34 @@
 /* -------------------------------- Variables ------------------------------- */
 html {
   --fonts: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  --primary: #ffffff;
-  --primary-div: #ffffff;
-  --secondary: #f5f5f5;
-  --theme-1: #ffa200;
-  --theme-2: #212121;
-  --theme-3: #5064B1;
-  --color: #212121;
-  --color-light: #4e4e4e;
+  --white: #ffffff;
+  --light-grey: #f5f5f5;
+  --orange: #ffa200;
+  --blue: #003459;
+  --black: #212121;
+  --grey: #4e4e4e;
+  --overlay: rgba(255, 255, 255, 0.90);
   --radius: 10px;
   --border: 1px solid #CACACA;
-  --shadow: 0 0 10px rgba(0, 0, 0, 0.12);
-  --neomprphic-bg: #EBECF0;
+  --neomprphic-bg: #ffffff;
   --neomorphic-hover: -2px -2px 5px #ffffff,  2px 2px 5px #BABECC;
   --neomorphic: -5px -5px 20px #ffffff,  5px 5px 20px #BABECC;
   --neomorphic-active: none;
-  --invert: invert(1);
+  --invert: invert(0);
 }
 
 html[data-theme='dark'] {
-  --primary: #212121;
-  --primary-div: #333333;
-  --secondary: #333333;
-  --theme-1: #ffa200;
-  --theme-2: #009dff;
-  --theme-3: #009dff;
-  --color: #f0f0f0;
-  --color-light: #dddddd;
-  --radius: 10px;
+  --white: #212121;
+  --light-grey: #333333;
+  --orange: #ffa200;
+  --blue: #009dff;
+  --black: #f0f0f0;
+  --grey: #dddddd;
+  --overlay: rgba(0, 0, 0, 0.90);
   --border: 1px solid #333333;
   --shadow: none;
-  --invert: invert(0.2);
-  --neomprphic-bg: #212121;
+  --invert: invert(1);
+  --neomprphic-bg: #333333;
   --neomorphic-hover: 2px 2px 5px #111111, -2px -2px 5px #353535;
   --neomorphic: 5px 5px 20px #111111, -5px -5px 20px #353535;
   --neomorphic-active: none;
@@ -44,7 +40,7 @@ html[data-theme='dark'] {
   margin: 0;
   padding: 0;
   font-family: var(--fonts);
-  color: var(--color);
+  color: var(--black);
   text-decoration: none;
   font-weight: 400;
   line-height: 22px;
@@ -74,14 +70,14 @@ section {
 
 /* ----------------------------- Default Values ----------------------------- */
 body {
-  background-color: var(--primary);
+  background-color: var(--white);
 }
 
 /* --------------------------------- Header --------------------------------- */
 header {
-  background-color: var(--primary);
-  -webkit-box-shadow: var(--shadow);
-          box-shadow: var(--shadow);
+  background-color: var(--white);
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
   height: 55px;
   display: -ms-grid;
   display: grid;
@@ -129,16 +125,15 @@ header .container .navbar nav li a {
   font-size: 16px;
   font-weight: 600;
   padding: 5px 15px;
-  color: var(--color-light);
+  color: var(--blue);
 }
 
 header .container .navbar nav li a:hover {
-  color: var(--theme-1);
-  background-color: var(--secondary);
+  color: var(--orange);
 }
 
 header .container .navbar nav li:hover {
-  color: var(--theme-1);
+  color: var(--orange);
   cursor: pointer;
 }
 
@@ -199,7 +194,7 @@ header .container .navbar .mode .slider:before {
 }
 
 header .container .navbar .mode input:checked + .slider {
-  background-color: var(--theme-1);
+  background-color: var(--orange);
 }
 
 header .container .navbar .mode input:checked + .slider:before {
@@ -221,14 +216,12 @@ html.transition *::before,
 html.transition *::after {
   -webkit-transition: all 150ms !important;
   transition: all 150ms !important;
-  -webkit-transition-delay: 0 !important;
-          transition-delay: 0 !important;
 }
 
 /* --------------------------------- Header --------------------------------- */
 /* --------------------------------- Footer --------------------------------- */
 footer {
-  background-color: var(--primary);
+  background-color: var(--white);
 }
 
 footer .container {
@@ -283,8 +276,7 @@ footer .container img {
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.2px;
-  color: #ffffff;
-  text-decoration: underline;
+  color: var(--black);
 }
 
 .banner .container .course-info .path a img {
@@ -293,28 +285,26 @@ footer .container img {
 }
 
 .banner .container .course-info .path a:hover {
-  color: var(--theme-1);
+  color: var(--orange);
 }
 
 .banner .container .course-info .title .infographics h1 {
   font-size: 30px;
   line-height: 44px;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--blue);
   font-family: 'Montserrat';
 }
 
 .banner .container .course-info .title .infographics p {
   font-size: 24px;
   line-height: 30px;
-  color: #ffffff;
+  color: var(--grey);
   margin-bottom: 30px;
-  -webkit-filter: opacity(80%);
-          filter: opacity(80%);
 }
 
 .banner .container .course-info .title .infographics span {
-  color: #ffffff;
+  color: var(--black);
   font-size: 15px;
   font-weight: 600;
   display: -webkit-box;
@@ -328,13 +318,15 @@ footer .container img {
   margin: 3px 0;
   margin-right: 8px;
   height: 17px;
+  -webkit-filter: var(--invert);
+          filter: var(--invert);
 }
 
 .banner .container .course-info .title .infographics a {
   width: 100%;
   font-size: 16px;
   font-weight: 600;
-  color: #d8d8d8;
+  color: var(--grey);
   cursor: default;
 }
 
@@ -344,24 +336,27 @@ footer .container img {
   padding: 12px 16px;
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: 0.5px;
-  color: #ffffff;
-  background: #059600;
+  letter-spacing: 0.2px;
+  color: #212121;
+  background: var(--orange);
   border: none;
   cursor: pointer;
   border-radius: 5px;
 }
 
 .banner .container .course-info .title .infographics a button:hover {
-  background: #034d00;
+  background: var(--white);
+  color: var(--black);
 }
 
 /* --------------------------------- Banner --------------------------------- */
 /* ------------------------------ Video-Player ------------------------------ */
 .first-section {
-  background: var(--primary-div);
-  padding: 10px 0 10px 0;
+  background: var(--white);
+  padding: 10px 0;
   margin-top: calc(400px + 55px);
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
 }
 
 .first-section .container {
@@ -373,11 +368,10 @@ footer .container img {
   display: grid;
   -ms-grid-columns: 64% 36%;
       grid-template-columns: 64% 36%;
-  background: var(--primary);
+  background: var(--white);
   -webkit-box-shadow: var(--shadow);
           box-shadow: var(--shadow);
   border-radius: var(--radius);
-  padding: 20px 20px 0 20px;
 }
 
 .first-section .container .video-player .video-section {
@@ -410,6 +404,7 @@ footer .container img {
 .first-section .container .video-player .video-section .video-title #title {
   font-weight: 600;
   font-size: 20px;
+  color: var(--blue);
 }
 
 .first-section .container .video-player .playlist-section {
@@ -427,7 +422,7 @@ footer .container img {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  background-color: var(--primary-div);
+  background-color: var(--light-grey);
   border-radius: var(--radius) var(--radius) 0 0;
 }
 
@@ -444,14 +439,14 @@ footer .container img {
   height: calc(100% - 50px);
   overflow-y: scroll;
   width: 100%;
-  background-color: var(--primary);
+  background-color: var(--white);
   border-radius: 0 0 var(--radius) var(--radius);
 }
 
 .first-section .container .video-player .playlist-section .playlist .video-card {
   margin: 0 auto;
   width: 100%;
-  background-color: var(--primary);
+  background-color: var(--white);
 }
 
 .first-section .container .video-player .playlist-section .playlist .video-card .something {
@@ -508,17 +503,17 @@ footer .container img {
   margin-top: 3px;
   font-size: 12px;
   line-height: 15px;
-  color: var(--color);
+  color: var(--black);
 }
 
 .first-section .container .video-player .playlist-section .playlist .video-card:hover {
-  background-color: var(--secondary);
+  background-color: var(--light-grey);
 }
 
 /* ------------------------------ Video-Player ------------------------------ */
 /* --------------------------- Course Description --------------------------- */
 .second-section {
-  background: var(--primary-div);
+  background: var(--white);
   padding: 20px 0 30px 0;
 }
 
@@ -534,8 +529,7 @@ footer .container img {
 
 .second-section .container .description {
   width: calc(100% - 300px - 20px);
-  padding: 10px 30px 30px 20px;
-  background: var(--primary);
+  background: var(--white);
   -webkit-box-shadow: var(--shadow);
           box-shadow: var(--shadow);
   border-radius: var(--radius);
@@ -560,7 +554,7 @@ footer .container img {
 .second-section .container .description .element .icons {
   width: 40px;
   height: 40px;
-  border: 1px solid var(--theme-3);
+  border: 2px solid var(--blue);
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -580,14 +574,14 @@ footer .container img {
   font-size: 22px;
   line-height: 36px;
   font-weight: 600;
-  color: var(--theme-3);
+  color: var(--blue);
 }
 
 .second-section .container .description .element p {
   font-size: 15px;
   line-height: 20px;
   margin-top: 8px;
-  color: var(--color);
+  color: var(--grey);
   text-align: justify;
 }
 
@@ -595,7 +589,7 @@ footer .container img {
   font-size: 15px;
   line-height: 20px;
   margin-top: 10px;
-  color: var(--color);
+  color: var(--grey);
   margin-left: 30px;
 }
 
@@ -610,7 +604,7 @@ footer .container img {
 .second-section .container .more-info .info-1 {
   width: 100%;
   margin-left: auto;
-  background-color: var(--primary);
+  background-color: var(--white);
   padding: 10px;
   -webkit-box-shadow: var(--shadow);
           box-shadow: var(--shadow);
@@ -640,6 +634,8 @@ footer .container img {
 .second-section .container .more-info .info-1 .info .left span img {
   width: 19px;
   margin-right: 8px;
+  -webkit-filter: var(--invert);
+          filter: var(--invert);
 }
 
 .second-section .container .more-info .info-1 .info .right {
@@ -647,24 +643,25 @@ footer .container img {
 }
 
 .second-section .container .more-info .info-1 .info .right a {
-  color: var(--theme-2);
+  color: var(--blue);
+  text-decoration: underline;
 }
 
 .second-section .container .more-info .info-1 .info .right a:hover {
-  color: var(--theme-1);
-  text-decoration: underline;
+  color: var(--orange);
+  text-decoration: none;
 }
 
 .second-section .container .more-info .info-1 hr {
   height: 0;
-  border: 1px solid var(--secondary);
+  border: 1px solid var(--light-grey);
 }
 
 /* --------------------------- Course Description --------------------------- */
 /* --------------------------------- cards -------------------------------- */
 .third-section {
   padding: 30px 0;
-  background: var(--neomprphic-bg);
+  background: var(--white);
 }
 
 .third-section .container {
@@ -721,7 +718,7 @@ footer .container img {
 
 .third-section .container .cards .cards_item .card .card_content {
   padding: 15px;
-  background: var(--primary);
+  background: var(--white);
 }
 
 .third-section .container .cards .cards_item .card .card_content span {
@@ -730,13 +727,14 @@ footer .container img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  place-items: center;
 }
 
 .third-section .container .cards .cards_item .card .card_content span img {
-  height: 18px;
-  width: 18px;
+  height: 16px;
+  width: 16px;
   margin-left: -2px;
-  margin-right: 2px;
+  margin-right: 5px;
 }
 
 .third-section .container .cards .cards_item .card .card_content h3 {
@@ -770,7 +768,7 @@ footer .container img {
 .third-section .container .cards .cards_item .card .card_content .bottom span img {
   width: 16px;
   height: 16px;
-  margin-left: 2px;
+  margin-left: 3px;
 }
 
 .third-section .container .cards .cards_item .card:hover {
@@ -862,13 +860,12 @@ footer .container img {
   }
   .first-section {
     padding: 20px 0 0 0;
-    margin-top: calc(300px + 25px);
+    margin-top: calc(280px + 25px);
   }
   .first-section .container {
     display: block;
   }
   .first-section .container .video-player {
-    background: var(--secondary);
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
     padding: 0;
@@ -876,13 +873,14 @@ footer .container img {
     -webkit-box-shadow: none;
             box-shadow: none;
     border-radius: none;
+    background: var(--light-grey);
   }
   .first-section .container .video-player .video-section .video iframe {
     border-radius: 0;
   }
   .first-section .container .video-player .video-section .video-title {
     padding: 10px;
-    background: var(--primary);
+    background: var(--white);
     font-size: 14px;
   }
   .first-section .container .video-player .playlist-section {
@@ -892,7 +890,7 @@ footer .container img {
     margin: 15px auto;
   }
   .first-section .container .video-player .playlist-section .playlist-title {
-    background: var(--primary);
+    background: var(--white);
   }
   .first-section .container .video-player .playlist-section .playlist-title .title {
     font-size: 16px;
@@ -910,43 +908,7 @@ footer .container img {
   .second-section .container .description {
     margin-left: 10px;
     margin-right: 10px;
-    width: calc(100% + 30px);
-    padding: 0 15px 15px 15px;
-  }
-  .second-section .container .description h2 {
-    display: block;
-    margin-top: 20px;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-  }
-  .second-section .container .description .infographic {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    margin-top: 10px;
-    margin-left: -3px;
-    margin-bottom: 30px;
-  }
-  .second-section .container .description .infographic span {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    place-items: center;
-    font-size: 15px;
-  }
-  .second-section .container .description .infographic span img {
-    width: 16px;
-    margin-right: 5px;
-  }
-  .second-section .container .description .infographic p {
-    margin: 0 10px;
-    font-size: 17px;
+    width: 100%;
   }
   .second-section .container .description .element {
     -ms-grid-columns: 100%;
