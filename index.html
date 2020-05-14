@@ -10,7 +10,16 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto|Sacramento&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body style="display: none;" id="body" onload='password'>
+    
+    <script>
+        var password;
+        var pass="chernobyl"
+
+        password = prompt('Enter Password', '');
+        if(password == pass)
+        document.getElementById('body').style.display = 'block'
+    </script>
 
     <div class="heading">
         <h1>
