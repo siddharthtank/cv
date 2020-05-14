@@ -12,6 +12,10 @@ html {
   --radius: 10px;
   --border: 1px solid #CACACA;
   --shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+  --neomprphic-bg: #EBECF0;
+  --neomorphic-hover: -2px -2px 5px #ffffff,  2px 2px 5px #BABECC;
+  --neomorphic: -5px -5px 20px #ffffff,  5px 5px 20px #BABECC;
+  --neomorphic-active: none;
   --invert: invert(1);
 }
 
@@ -28,6 +32,10 @@ html[data-theme='dark'] {
   --border: 1px solid #333333;
   --shadow: none;
   --invert: invert(0.2);
+  --neomprphic-bg: #212121;
+  --neomorphic-hover: 2px 2px 5px #111111, -2px -2px 5px #353535;
+  --neomorphic: 5px 5px 20px #111111, -5px -5px 20px #353535;
+  --neomorphic-active: none;
 }
 
 /* -------------------------------- Variables ------------------------------- */
@@ -409,6 +417,7 @@ footer .container img {
   margin-left: 10px;
   -webkit-box-shadow: var(--shadow);
           box-shadow: var(--shadow);
+  border-radius: var(--radius);
   height: calc(100% - 50px);
 }
 
@@ -418,7 +427,7 @@ footer .container img {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  background-color: var(--primary-dark);
+  background-color: var(--primary-div);
   border-radius: var(--radius) var(--radius) 0 0;
 }
 
@@ -655,7 +664,7 @@ footer .container img {
 /* --------------------------------- cards -------------------------------- */
 .third-section {
   padding: 30px 0;
-  background: var(--primary-div);
+  background: var(--neomprphic-bg);
 }
 
 .third-section .container {
@@ -692,8 +701,8 @@ footer .container img {
 
 .third-section .container .cards .cards_item .card {
   border-radius: var(--radius);
-  -webkit-box-shadow: var(--shadow);
-          box-shadow: var(--shadow);
+  -webkit-box-shadow: var(--neomorphic);
+          box-shadow: var(--neomorphic);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -762,6 +771,18 @@ footer .container img {
   width: 16px;
   height: 16px;
   margin-left: 2px;
+}
+
+.third-section .container .cards .cards_item .card:hover {
+  cursor: pointer;
+  -webkit-box-shadow: var(--neomorphic-hover);
+          box-shadow: var(--neomorphic-hover);
+}
+
+.third-section .container .cards .cards_item .card:active {
+  cursor: pointer;
+  -webkit-box-shadow: var(--neomorphic-active);
+          box-shadow: var(--neomorphic-active);
 }
 
 /* --------------------------------- cards -------------------------------- */
@@ -870,11 +891,14 @@ footer .container img {
     width: calc(100% - 20px);
     margin: 15px auto;
   }
+  .first-section .container .video-player .playlist-section .playlist-title {
+    background: var(--primary);
+  }
   .first-section .container .video-player .playlist-section .playlist-title .title {
     font-size: 16px;
   }
   .first-section .container .video-player .playlist-section .playlist {
-    height: calc(300px - 54px);
+    height: calc(300px - 50px);
     width: 100%;
   }
   .first-section .container .video-player .playlist-section .playlist .video-card {
@@ -938,6 +962,10 @@ footer .container img {
   }
   .second-section .container .more-info {
     display: none;
+  }
+  .third-section .container .cards .cards_item .card {
+    -webkit-box-shadow: var(--neomorphic-hover);
+            box-shadow: var(--neomorphic-hover);
   }
 }
 
