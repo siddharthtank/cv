@@ -10,6 +10,7 @@ html {
   --overlay: rgba(255, 255, 255, 0.90);
   --radius: 10px;
   --border: 1px solid #CACACA;
+  --shadow: 0 0 20px rgba(0, 0, 0, 0.12);
   --neomprphic-bg: #ffffff;
   --neomorphic-hover: -2px -2px 5px #ffffff,  2px 2px 5px #BABECC;
   --neomorphic: -5px -5px 20px #ffffff,  5px 5px 20px #BABECC;
@@ -369,9 +370,6 @@ footer .container img {
   -ms-grid-columns: 64% 36%;
       grid-template-columns: 64% 36%;
   background: var(--white);
-  -webkit-box-shadow: var(--shadow);
-          box-shadow: var(--shadow);
-  border-radius: var(--radius);
 }
 
 .first-section .container .video-player .video-section {
@@ -410,9 +408,6 @@ footer .container img {
 .first-section .container .video-player .playlist-section {
   position: relative;
   margin-left: 10px;
-  -webkit-box-shadow: var(--shadow);
-          box-shadow: var(--shadow);
-  border-radius: var(--radius);
   height: calc(100% - 50px);
 }
 
@@ -530,9 +525,6 @@ footer .container img {
 .second-section .container .description {
   width: calc(100% - 300px - 20px);
   background: var(--white);
-  -webkit-box-shadow: var(--shadow);
-          box-shadow: var(--shadow);
-  border-radius: var(--radius);
 }
 
 .second-section .container .description h2 {
@@ -606,9 +598,6 @@ footer .container img {
   margin-left: auto;
   background-color: var(--white);
   padding: 10px;
-  -webkit-box-shadow: var(--shadow);
-          box-shadow: var(--shadow);
-  border-radius: var(--radius);
 }
 
 .second-section .container .more-info .info-1 .info {
